@@ -95,17 +95,17 @@ puts "Creating Child"
 # child26 = Child.create(user_id: user20, first_name: "Noah", gender: "boy", age: 3, about: "Noah loves running in circles and laughing with other kids.")
 # child27 = Child.create(user_id: user20, first_name: "Nina", gender: "girl", age: 3, about: "Nina is a natural climber and always heads straight to the jungle gym.")
 
-child28 = Child.create(user_id: user21, first_name: "Mia", gender: "girl", age: 2, about: "Mia is gentle and enjoys watching the other kids before joining in.")
+child28 = Child.create(user_id: user21, first_name: "Mia", gender: "1", age: 2, about: "Mia is gentle and enjoys watching the other kids before joining in.")
 # child29 = Child.create(user_id: user21, first_name: "Anna", gender: "girl", age: 4, about: "Anna is adventurous and loves sliding again and again.")
 
-child30 = Child.create(user_id: user22, first_name: "Nick", gender: "boy", age: 5, about: "Nick is super talkative and loves asking 'why' about everything.")
+child30 = Child.create(user_id: user22, first_name: "Nick", gender: "0", age: 5, about: "Nick is super talkative and loves asking 'why' about everything.")
 
-child31 = Child.create(user_id: user23, first_name: "Emil", gender: "boy", age: 3, about: "Emil enjoys toy trucks and is always digging in the sandbox.")
+child31 = Child.create(user_id: user23, first_name: "Emil", gender: "0", age: 3, about: "Emil enjoys toy trucks and is always digging in the sandbox.")
 # child32 = Child.create(user_id: user23, first_name: "Luisa", gender: "girl", age: 5, about: "Luisa loves dress-up and making new friends.")
 
-child33 = Child.create(user_id: user24, first_name: "Finn", gender: "boy", age: 3, about: "Finn is full of energy and always looking for a race partner.")
+child33 = Child.create(user_id: user24, first_name: "Finn", gender: "0", age: 3, about: "Finn is full of energy and always looking for a race partner.")
 
-child34 = Child.create(user_id: user25, first_name: "Nico", gender: "boy", age: 1, about: "Nico is still crawling but loves to laugh and watch older kids.")
+child34 = Child.create(user_id: user25, first_name: "Nico", gender: "0", age: 1, about: "Nico is still crawling but loves to laugh and watch older kids.")
 # child35 = Child.create(user_id: user25, first_name: "Mara", gender: "girl", age: 4, about: "Mara is talkative and loves imaginary tea parties.")
 # child36 = Child.create(user_id: user25, first_name: "Jonah", gender: "boy", age: 7, about: "Jonah is into soccer and always brings a ball to the park.")
 
@@ -126,9 +126,9 @@ description3 = Description.create(characteristic_id: characteristic1, child_id: 
 
 
 puts "Creating Preferences"
-preference1 = Preference.create(characteristic_id: characteristic1 , child_id: child28 ,age: 2 ,gender: "girl")
-preference2 = Preference.create(characteristic_id: characteristic2 , child_id: child30 ,age: 5 ,gender: "boy")
-preference3 = Preference.create(characteristic_id: characteristic3 , child_id: child31 ,age: 4 ,gender: "girl")
+preference1 = Preference.create(characteristic_id: characteristic1 , child_id: child28 ,age: 2 ,gender: "1")
+preference2 = Preference.create(characteristic_id: characteristic2 , child_id: child30 ,age: 5 ,gender: "0")
+preference3 = Preference.create(characteristic_id: characteristic3 , child_id: child31 ,age: 4 ,gender: "1")
 
 
 puts "Creating request"
