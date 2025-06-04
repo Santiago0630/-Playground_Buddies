@@ -1,0 +1,50 @@
+//COLORS:
+.orange {
+  background-color: rgb(249, 220, 90);
+}
+
+.blue {
+  background-color: rgb(97, 181, 241);
+}
+
+.green {
+  background-color: rgb(112, 200, 168);
+}
+
+.red {
+  background-color: rgb(238, 127, 114);
+}
+
+.purple {
+  background-color: rgb(177, 162, 224);
+}
+
+.six {
+  background-color: rgb(243, 179, 112);
+}
+
+.black {
+  background-color: rgb(80, 83, 84);
+}
+
+//BORDER RADIUS
+.border {
+  border-radius: 4px;
+}
+
+//TYPOGRAPHY
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-neue-regular {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, p {
+  color: rgb(80, 83, 84);
+}

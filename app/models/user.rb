@@ -5,8 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :first_name, :last_name, :age, :gender, :about, presence: true
   has_many :messages
-  has_many :chats, through: :messages
   has_many :playgrounds, through: :user_playgrounds
   has_many :children
-  has_many :requests
+  has_many :requests_as_requester, class_name: "Request", foreign_key: requester_id
+  has_many :requests_as_receiver, class_name: "Request", foreign_key: receiver_id
+  # still need to figure out how to conect with the chat table
 end
