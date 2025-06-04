@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :messages
   has_many :playgrounds, through: :user_playgrounds
   has_many :children
-  has_many :requests_as_requester, class_name: "Request", foreign_key: requester_id
-  has_many :requests_as_receiver, class_name: "Request", foreign_key: receiver_id
+  has_many :requests_as_requester, class_name: "Request", foreign_key: :requester_id
+  has_many :requests_as_receiver, class_name: "Request", foreign_key: :receiver_id
   # still need to figure out how to conect with the chat table
 end
