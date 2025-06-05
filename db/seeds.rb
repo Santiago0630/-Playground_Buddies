@@ -120,21 +120,21 @@ characteristic7 = Characteristic.create(name: "chaotic")
 characteristic8 = Characteristic.create(name: "orderly")
 
 puts "Creating descriptions"
-description1 = Description.create(characteristic_id: characteristic2, child_id: child28)
-description2 = Description.create(characteristic_id: characteristic3, child_id: child30)
-description3 = Description.create(characteristic_id: characteristic1, child_id: child31)
+description1 = Description.create(characteristic: characteristic2, child: child28)
+description2 = Description.create(characteristic: characteristic3, child: child30)
+description3 = Description.create(characteristic: characteristic1, child: child31)
 
 
 puts "Creating Preferences"
-preference1 = Preference.create(characteristic_id: characteristic1 , child_id: child28 ,age: 2 ,gender: 1)
-preference2 = Preference.create(characteristic_id: characteristic2 , child_id: child30 ,age: 5 ,gender: 0)
-preference3 = Preference.create(characteristic_id: characteristic3 , child_id: child31 ,age: 4 ,gender: 1)
+preference1 = Preference.create(characteristic: characteristic1, child: child28, age: 2, gender: 1)
+preference2 = Preference.create(characteristic: characteristic2, child: child30, age: 5, gender: 0)
+preference3 = Preference.create(characteristic: characteristic3, child: child31, age: 4, gender: 1)
 
 
 puts "Creating request"
-request1 = Request.create(status: "accepted", requester_id: user21, receiver_id: user22)
-request2 = Request.create(status: "accepted", requester_id: user22, receiver_id: user23)
-request3 = Request.create(status: "rejected", requester_id: user23, receiver_id: user21)
+request1 = Request.create(status: "accepted", requester: user21, receiver: user22)
+request2 = Request.create(status: "accepted", requester: user22, receiver: user23)
+request3 = Request.create(status: "rejected", requester: user23, receiver: user21)
 
 puts "creating Playgrounds"
 playground1 = Playground.create(name: "Abenteuerlicher Bauspielplatz", address: "Wiener Straße 59B, 10999 Berlin", latitude: "52.494857", longitude: "13.432602")

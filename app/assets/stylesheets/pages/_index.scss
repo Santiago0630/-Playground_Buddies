@@ -1,27 +1,6 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "chats";
+@import "profile";
+@import "children";
 
-
-#profile-picture {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-}
-
-.w-100 {
-border-radius: 12px;
-margin-top: 1px;
-padding: 5px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.card-background {
-  background-color: blanchedalmond;
-  border-radius: 10px;
-}
-.child-background {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: aqua;
-  
-}

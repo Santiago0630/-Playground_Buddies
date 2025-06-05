@@ -1,0 +1,74 @@
+// .characteristics {
+//   position: absolute;
+//   transform: scale(0);
+// }
+
+// .characteristics + label {
+//   font-family: "Comic Neue", cursive;
+//   cursor: pointer;
+//   /* button look here*/
+//   background-color: rgba(249, 220, 90, 0.3);
+//   text-align: center;
+//   height: 47px;
+//   width: 169px;
+//   border-radius: 15px;
+//   color: rgb(80, 83, 84);
+//   font-size: 20px;
+// }
+
+// .characteristics:checked + label {
+//   font-family: "Comic Neue", cursive;
+//   cursor: pointer;
+//   /* button look here*/
+//   background-color: rgba(249, 220, 90, 0.8);
+//   text-align: center;
+//   height: 47px;
+//   width: 169px;
+//   border-radius: 15px;
+//   color: rgb(80, 83, 84);
+//   font-size: 20px;
+// }
+
+// .tag-item {
+//   display: inline-block;
+// }
+
+
+.tag-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.tag-selector + label {
+  cursor: pointer;
+  font-family: "Comic Neue", cursive;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background-color: rgba(249, 220, 90, 0.3);
+  color: rgb(80, 83, 84);
+  margin: 4px 4px 4px 4px;
+  text-align: center;
+}
+
+.tag-selector:checked + label {
+  background-color: rgba(249, 220, 90, 0.8);
+  color: black;
+}
+
+.characteristics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 15px;
+}
+
+.profile_about {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 25px;
+  margin-top: 30px;
+  margin-bottom: -10px;
+}
+
