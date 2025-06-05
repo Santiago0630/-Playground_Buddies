@@ -11,10 +11,13 @@ Request Boxes
 
 Message-notification Boxes
 <div>
-  <h5> Messages </h5>   
-  
+  <h5> Chats </h5>   
+  <% @chats.each do |chat| %>
   <p> *** Image Placeholder *** </p>
-  <h3> <%= @messages.user_id.children.first.first_name %> </h3>
-  <h4> <%= @messages.user.user_id %> </h4>
-  
+  <h3> <%= chat.messages.first.content %> </h3>
+  <h3> <%= chat.messages.first.user.children.first.first_name %> </h3>
+  <h3> <%= chat.messages.first.user.first_name %> </h3>
+  <% end %>
 </div>
+
+<%= console %> 
