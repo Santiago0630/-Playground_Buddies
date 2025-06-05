@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
 
-  root to: "playgrounds#index"
-
+  # root to: "playgrounds#index"
   root to: "children#index"
-  
   devise_for :users
   resources :children, only: [ :index, :show ]
   resources :users, only: [:index, :show]

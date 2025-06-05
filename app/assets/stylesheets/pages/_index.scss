@@ -1,38 +1,4 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "profile";
-
-
-#profile-picture {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-}
-
-.w-100 {
-border-radius: 12px;
-margin-top: 1px;
-padding: 5px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.card-background {
-  background-color: blanchedalmond;
-  border-radius: 10px;
-}
-.child-background {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.card {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.card_about {
-  border-radius: 10px;
-  padding: 1px;
-  flex: 10;
-  display: flex;
-  flex-direction: column;
-}
+@import "children";
