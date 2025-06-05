@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>PlaygroundBuddies</title>
-    <%= favicon_link_tag asset_path('logo.png') %>
+    <%= favicon_link_tag asset_path('playground.png') %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -16,8 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Boldonse&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Coral+Pixels&family=Luckiest+Guy&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
 
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
+  <body><% render "shared/navbar" %>
+    <%= render "shared/flashes" %>
 
     <%= yield %>
   </body>
