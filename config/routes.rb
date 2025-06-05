@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+
+  root to: "playgrounds#index"
+
   root to: "children#index"
+  
   devise_for :users
   resources :children, only: [ :index, :show ]
   resources :users, only: [:index, :show]
+
+  get "profile", to: "pages#profile"
   resources :requests, only: [:index]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
