@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root to: "users#index"
+  root to: "children#index"
   devise_for :users
+  resources :children, only: [ :index, :show ]
   resources :users, only: [:index, :show]
   resources :requests, only: [:index]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
