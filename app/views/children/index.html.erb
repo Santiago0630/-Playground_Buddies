@@ -1,0 +1,46 @@
+<div class='d-flex justify-content-between gap-1.5 py-1 mx-1'>
+  <div class="w-100">
+    <a class="btn btn-primary w-100" href="" target="_blank"> All </a>
+  </div>
+  <div class="w-100">
+    <a class="btn btn-primary w-100" href="" target="_blank"> Nearby </a>
+  </div>
+  <div class="w-100">
+    <a class="btn btn-primary w-100" href="" target="_blank"> Preferences </a>
+  </div>
+</div>
+
+<div>
+
+  <div>
+    <% @children.each do |child| %>
+    <div class=" card-background p-2 m-1">
+
+    <div class="row">
+
+      <div class="col">
+       <img id="profile-picture" src="https://media.istockphoto.com/id/1268675353/photo/portrait-of-cute-little-girl-outdoors.jpg?s=612x612&w=0&k=20&c=7q3OKwR4BnYsf2Pflz0hnzLfEdgEz4D8d9rUzIQscqE=" alt="profile_picture" width="150" height="150">
+      </div>
+
+      <div class="col">
+       <div class=" comic-neue-regular"><%= child.first_name %></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class=" comic-neue-regular"><%= child.age %></div>
+      </div>
+            <div class="col">
+              <div class=" comic-neue-regular"><%= child.gender %></div>
+      </div>
+    </div>
+
+    <div class="row">
+     <div class=" card_about comic-neue-regular"><%= child.about %></div>
+    </div>
+
+    </div>
+    <% end %>
+  </div>
+</div>
