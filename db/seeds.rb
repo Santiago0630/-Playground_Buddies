@@ -1,25 +1,23 @@
-Child.destroy_all
-puts "Destroying all children"
-
-Characteristic.destroy_all
-puts "Destroying all characteristics"
-
-Playground.destroy_all
-puts "Destroying all playgrounds"
-
-User.destroy_all
-puts "Destroying all users"
-
 Description.destroy_all
 puts "destroying all descriptions"
 
 Preference.destroy_all
 puts "destroying all preferences"
 
+Characteristic.destroy_all
+puts "Destroying all characteristics"
+
 Request.destroy_all
 puts "destroying all requests"
 
+Playground.destroy_all
+puts "Destroying all playgrounds"
 
+Child.destroy_all
+puts "Destroying all children"
+
+User.destroy_all
+puts "Destroying all users"
 
 puts "Creating user"
 # user1= User.create(first_name: "Malika", last_name: "Odon", age: 31, gender:"female", email: "malika@gmail.com", password: "123456", about:"Hey, Playground Buddies! Me and my son Chris are happy to find a new Playmate for him, preferably someone who can match his high energy")
@@ -95,17 +93,17 @@ puts "Creating Child"
 # child26 = Child.create(user_id: user20, first_name: "Noah", gender: "boy", age: 3, about: "Noah loves running in circles and laughing with other kids.")
 # child27 = Child.create(user_id: user20, first_name: "Nina", gender: "girl", age: 3, about: "Nina is a natural climber and always heads straight to the jungle gym.")
 
-child28 = Child.create(user: user21, first_name: "Mia", gender: 1, age: 2, about: "Mia is gentle and enjoys watching the other kids before joining in.")
+child28 = Child.create(user: user21, first_name: "Mia", gender: 1, age: 2, about: "Mia is gentle and enjoys watching the other kids before joining in.", image_url: "https://media.istockphoto.com/id/1438462378/photo/close-up-portrait-of-mother-and-daughter.jpg?s=612x612&w=0&k=20&c=cYHY-5PMxY2Zkxcn7WT7-7R4RnwS_anrZXbFsCK-0Eg=")
 # child29 = Child.create(user_id: user21, first_name: "Anna", gender: "girl", age: 4, about: "Anna is adventurous and loves sliding again and again.")
 
-child30 = Child.create(user: user22, first_name: "Nick", gender: 0, age: 5, about: "Nick is super talkative and loves asking 'why' about everything.")
+child30 = Child.create(user: user22, first_name: "Nick", gender: 0, age: 5, about: "Nick is super talkative and loves asking 'why' about everything.", image_url: "https://media.30seconds.com/tip/lg/Play-Matters-Dads-Why-You-Need-to-Play-With-Your-Kids-Whet-15579-2b5162a120-1618894890.jpg")
 
-child31 = Child.create(user: user23, first_name: "Emil", gender: 0, age: 3, about: "Emil enjoys toy trucks and is always digging in the sandbox.")
+child31 = Child.create(user: user23, first_name: "Emil", gender: 0, age: 3, about: "Emil enjoys toy trucks and is always digging in the sandbox.", image_url: "https://media.istockphoto.com/id/1447127590/photo/mother-child-and-happy-piggyback-in-summer-holiday-and-blue-sky-sunshine-and-play-in-a-green.jpg?s=612x612&w=0&k=20&c=hhYG6Y2QU_PZAZ8x9WjzPaI1p3cGO07ABz_AimMi0Hw=")
 # child32 = Child.create(user_id: user23, first_name: "Luisa", gender: "girl", age: 5, about: "Luisa loves dress-up and making new friends.")
 
-child33 = Child.create(user: user24, first_name: "Finn", gender: 0, age: 3, about: "Finn is full of energy and always looking for a race partner.")
+child33 = Child.create(user: user24, first_name: "Finn", gender: 0, age: 3, about: "Finn is full of energy and always looking for a race partner.", image_url: "https://media.istockphoto.com/id/2153015723/de/foto/with-bicycle-having-fun-happy-father-with-son-are-on-the-field-at-summertime.jpg?s=612x612&w=0&k=20&c=8iwSkt18H9sRp23J4ILieqmn8IXPZmuzPWMfCRWYiXY=")
 
-child34 = Child.create(user: user25, first_name: "Nico", gender: 0, age: 1, about: "Nico is still crawling but loves to laugh and watch older kids.")
+child34 = Child.create(user: user25, first_name: "Nico", gender: 0, age: 1, about: "Nico is still crawling but loves to laugh and watch older kids.", image_url: "https://media.istockphoto.com/id/1471672931/photo/mother-and-son-spend-time-together-and-hugging-gives-a-tulip-flower-on-mothers-day-together.jpg?s=612x612&w=0&k=20&c=1KigzQd5UOVvxnN-b12VnhtBO2WDlnWdMxU6ojObD3o=")
 # child35 = Child.create(user_id: user25, first_name: "Mara", gender: "girl", age: 4, about: "Mara is talkative and loves imaginary tea parties.")
 # child36 = Child.create(user_id: user25, first_name: "Jonah", gender: "boy", age: 7, about: "Jonah is into soccer and always brings a ball to the park.")
 

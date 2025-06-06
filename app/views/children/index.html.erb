@@ -19,7 +19,7 @@
   </div>
 
   <div>
-  <a class="category_buttons">Shared fav.</a>
+  <a class="category_buttons">Favourites</a>
   </div>
 
   <div>
@@ -32,14 +32,14 @@
   <% @children.each do |child| %>
     <div class="child_card comic-neue-regular">
 
-      <div class="image_and_name">
-        <img class="child_card_img" src="https://media.istockphoto.com/id/1268675353/photo/portrait-of-cute-little-girl-outdoors.jpg?s=612x612&w=0&k=20&c=7q3OKwR4BnYsf2Pflz0hnzLfEdgEz4D8d9rUzIQscqE=" alt="profile_picture">
-        <p class="child_card_boxes child_name"><%= child.first_name %></p>
+      <div class="image_and_name foto_fit">
+        <%= image_tag child.image_url %>
+        <p class="child_card_boxes child_name"><%= link_to child.first_name, child_path(child)%></p>
       </div>
 
       <div class="age_and_gender">
         <p class="child_card_boxes"><%= child.age %></p>
-        <p class="child_card_boxes">girl</p><%#= child.gender %>
+        <p class="child_card_boxes"><%= child.gender %></p>
       </div>
 
       <div class="child_card_boxes">

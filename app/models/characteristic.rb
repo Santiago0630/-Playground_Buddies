@@ -1,4 +1,4 @@
 class Characteristic < ApplicationRecord
-  has_many :descriptions
-  has_many :preferences
+  has_many :descriptions, dependent: :destroy
+  has_many :preferences, dependent: :destroy
 end
