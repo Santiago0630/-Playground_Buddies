@@ -1,0 +1,7 @@
+ <%= form_with model: @user do |f| %>
+    <div>
+      <%= f.label :date_of_birth %><br>
+      <%= f.date_field :date_of_birth %>
+    </div>
+    <%= f.submit %>
+  <% end %>

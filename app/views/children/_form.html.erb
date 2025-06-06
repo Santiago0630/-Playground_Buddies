@@ -1,0 +1,45 @@
+<%= simple_form_for(current_user, url: profile_path) do |f| %>
+  <div class="drop_downs">
+    <div class="single_drop_down">
+      <%= f.input :age, prompt: "Select Age" %>
+    </div>
+
+    <div class="single_drop_down">
+      <%= f.input :gender, collection: ["Boy", "Girl", "Prefer not to say"], prompt: "Select Gender" %>
+    </div>
+  </div>
+  <p class="comic-neue-regular profile_about">About Child:</p>
+  <div class="descriptions characteristics">
+    <% Characteristic.all.each do |characteristic| %>
+      <% selected = @child.self_characteristics.include?(characteristic) %>
+      <input
+        class="tag-selector description-checkbox"
+        type="checkbox"
+        id="description-<%= characteristic.name.parameterize %>"
+        data-characteristic-id="<%= characteristic.id %>"
+        <%= 'checked' if selected %>
+      />
+      <label for="description-<%= characteristic.name.parameterize %>">
+        <%= characteristic.name %>
+      </label>
+    <% end %>
+  </div>
+
+  <p class="comic-neue-regular profile_about">Preferences:</p>
+  <div class="preferences characteristics">
+    <% Characteristic.all.each do |characteristic| %>
+      <% selected = @child.other_characteristics.include?(characteristic) %>
+      <input
+        class="tag-selector description-checkbox"
+        type="checkbox"
+        id="description-<%= characteristic.name.parameterize %>"
+        data-characteristic-id="<%= characteristic.id %>"
+        <%= 'checked' if selected %>
+      />
+      <label for="description-<%= characteristic.name.parameterize %>">
+        <%= characteristic.name %>
+      </label>
+    <% end %>
+  </div>
+  <%= f.button :submit %>
+<% end %>
