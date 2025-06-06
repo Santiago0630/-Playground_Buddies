@@ -1,0 +1,10 @@
+<div class="navbar-bottom-box"> 
+      <% if user_signed_in? %>
+      <%= link_to "🏠", children_path, class: "navbar-bottom-home", id: "navbar-bottom-home" %>
+      <% else %>
+      <%= link_to "🏠", new_user_session_path, class: "navbar-bottom-menu", id: "navbar-bottom-home" %>
+    <% end %>
+    <%= link_to "💬", requests_path, class: "navbar-bottom-menu", id: "navbar-bottom-request" %>
+    <%= link_to "🗺️", root_path, class: "navbar-bottom-menu", id: "navbar-bottom-map" %>
+    <%= link_to "👧🏽", profile_path, class: "navbar-bottom-menu", id: "navbar-bottom-profile" %>
+</div> 
