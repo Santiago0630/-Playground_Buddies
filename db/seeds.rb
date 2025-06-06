@@ -134,7 +134,6 @@ request1 = Request.create(status: "accepted", requester: user21, receiver: user2
 request2 = Request.create(status: "accepted", requester: user22, receiver: user23)
 request3 = Request.create(status: "rejected", requester: user23, receiver: user21)
 
-
 puts "creating Playgrounds"
 playground1 = Playground.create(name: "Abenteuerlicher Bauspielplatz", address: "Wiener Straße 59B, 10999 Berlin", latitude: "52.494857", longitude: "13.432602")
 playground2 = Playground.create(name: "Kolle 37 Adventure Playground", address: "Kollwitzstraße 35, 10405 Berlin", latitude: "52.532984", longitude: "13.420529")

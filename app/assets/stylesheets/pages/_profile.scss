@@ -72,3 +72,16 @@
   margin-bottom: -10px;
 }
 
+.gender_button {
+  color: yellow;
+}
+
+.drop_downs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px;
+}
+
+.single_drop_down {
+  margin: 5px;
+}
