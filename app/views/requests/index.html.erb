@@ -1,20 +1,41 @@
-Request Boxes
 <div>
-  <h5> New Requests </h5>
+  <h5 style="margin: 20px" class="luckiest-guy-regular"> All Requests </h5> 
   <% @pending_requests.each do |request| %>
     <%# wrap this is some styling to make cards %>
-    <p> *** Image Placeholder *** </p>
-    <h3> <%= request.requester.children.first.first_name %> </h3>
-    <h4> <%= request.requester.first_name %> </h4>
+    <div class="chat-box">
+      <img class="user-image" src="https://th.bing.com/th/id/OIP.jaCY5SwnrEfiIe5oy_B7HwHaE8?w=244&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Parent Profile Picture">
+      <div class="text-vertical-center">
+        <div>
+          <p> New Request </p>
+        </div>
+
+        <div> 
+          <h1 class="luckiest-guy-regular"> <%= request.requester.children.first.first_name %> </h1>
+        </div>
+
+        <div>
+          <h5 class="comic-neue-regular"> <%= request.requester.first_name %> </h5>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
 
-Message-notification Boxes
 <div>
-  <h5> Messages </h5>   
-  
-  <p> *** Image Placeholder *** </p>
-  <h3> <%= @messages.user_id.children.first.first_name %> </h3>
-  <h4> <%= @messages.user.user_id %> </h4>
-  
+  <h5 style="margin: 20px" class="luckiest-guy-regular"> All Chats </h5>   
+  <% @chats.each do |chat| %>
+  <div class="notification-box">
+    <img class="user-image" src="https://th.bing.com/th/id/OIP.jaCY5SwnrEfiIe5oy_B7HwHaE8?w=244&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Parent Profile Picture">
+    <%#h3> <%= chat.messages.first.content %> 
+    <div class="text-vertical-center"> 
+    
+      <div> 
+        <h1 class="luckiest-guy-regular"> <%= chat.messages.first.user.children.first.first_name %> </h1>
+      </div> 
+      <div> 
+        <h5 class="comic-neue-regular"> <%= chat.messages.first.user.first_name %> </h5>
+      </div> 
+    </div>
+  </div>
+  <% end %>
 </div>
