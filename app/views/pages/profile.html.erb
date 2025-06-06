@@ -1,12 +1,21 @@
 <div>
-  <p class="comic-neue-regular profile_about">About Parent:</p>
-  <div class="descriptions characteristics">
-    <input class="border-box" type="checkbox" id="age"/>
-    <label for="age">Age</label>
+  <img class="profile_img" src="" alt="profile_picture">
 
-    <input class="border-box" type="checkbox" id="gender"/>
-    <label for="gender">Gender</label>
+  <p class="comic-neue-regular profile_about">About Parent:</p>
+  <div class="drop_downs">
+    <div class="single_drop_down">
+        <%= simple_form_for(current_user, url: profile_path) do |f| %>
+        <%= f.input :age, prompt: "Select Age" %>
+    </div>
+
+    <div class="single_drop_down">
+        <%= f.input :gender, collection: ["Boy", "Girl", "Prefer not to say"], prompt: "Select Gender" %>
+        <%= f.button :submit, "Save Profile" %>
+      <% end %>
+    </div>
   </div>
+
+<%# update the current user with the params %>
 
   <p class="comic-neue-regular profile_about">About Child:</p>
   <div class="descriptions characteristics">
@@ -37,28 +46,28 @@
 
   <p class="comic-neue-regular profile_about">Preferences:</p>
   <div class="preferences characteristics">
-    <input class="tag-selector" type="checkbox" id="active"/>
-    <label for="active">Active</label>
+    <input class="tag-selector" type="checkbox" id="active2"/>
+    <label for="active2">Active</label>
 
-    <input class="tag-selector" type="checkbox" id="active"/>
-    <label for="active">Active</label>
+    <input class="tag-selector" type="checkbox" id="calm2"/>
+    <label for="calm2">Calm</label>
 
-    <input class="tag-selector" type="checkbox" id="active"/>
-    <label for="active">Active</label>
+    <input class="tag-selector" type="checkbox" id="energetic2"/>
+    <label for="energetic2">Energetic</label>
 
-    <input class="tag-selector" type="checkbox" id="active"/>
-    <label for="active">Active</label>
+    <input class="tag-selector" type="checkbox" id="peaceful2"/>
+    <label for="peaceful2">Peaceful</label>
 
-    <input class="tag-selector" type="checkbox" id="active"/>
-    <label for="active">Active</label>
+    <input class="tag-selector" type="checkbox" id="outgoing2"/>
+    <label for="outgoing2">Outgoing</label>
 
-    <input class="tag-selector" type="checkbox" id="active"/>
-    <label for="active">Active</label>
+    <input class="tag-selector" type="checkbox" id="shy2"/>
+    <label for="shy2">Shy</label>
 
-    <input class="tag-selector" type="checkbox" id="active"/>
-    <label for="active">Active</label>
+    <input class="tag-selector" type="checkbox" id="chaotic2"/>
+    <label for="chaotic2">Chaotic</label>
 
-    <input class="tag-selector" type="checkbox" id="active"/>
-    <label for="active">Active</label>
+    <input class="tag-selector" type="checkbox" id="orderly2"/>
+    <label for="orderly2">Orderly</label>
   </div>
 </div>

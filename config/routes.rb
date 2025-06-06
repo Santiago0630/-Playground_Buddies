@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :children, only: [ :index, :show ]
   resources :users, only: [:index, :show]
 
+  patch "profile", to: "pages#update_profile"
+
   get "profile", to: "pages#profile"
   resources :requests, only: [:index]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
