@@ -31,3 +31,8 @@
     <% end %>
   </div>
 </div>
+
+
+        <img class="child_card_img" src="https://media.istockphoto.com/id/1268675353/photo/portrait-of-cute-little-girl-outdoors.jpg?s=612x612&w=0&k=20&c=7q3OKwR4BnYsf2Pflz0hnzLfEdgEz4D8d9rUzIQscqE=" alt="profile_picture">
+<p class="child_card_img"><%= child.image_url %></p>
+<%= image_tag child.image_url %>
