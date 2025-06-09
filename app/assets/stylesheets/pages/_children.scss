@@ -38,7 +38,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 5px;
-  margin-top: 50px;
+  margin-top: 2px;
 }
 
 .category_buttons {
@@ -46,7 +46,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: inline-block;
   font-size: 15px;
   font-weight: bold;
-  border-radius: 50px;
+  border-radius: 15px;
   padding: 10px 10px;
   background-color: rgba(97, 181, 241, 0.1);
   color: rgb(97, 181, 241);
@@ -120,7 +120,7 @@ a {
 .back-button {
   font-family: "Comic Neue", cursive;
   font-size: large;
-  margin-top: 20px;
+  margin-top: 2px;
   margin-left: 20px;
   font-weight: bold;
 }
@@ -149,19 +149,23 @@ a {
 }
 
 .button1 {
-  background-color: rgb(238, 199, 72);
-  border-radius: 15px;
-  margin-left: 10px;
-  font-family: "Comic Neue", cursive;
-  padding-left: 10px;
-  padding-right: 10px;
+background-color: rgb(238, 199, 72);
+border-radius: 10px;
+font-family: "Comic Neue", cursive;
+position: relative;
+border-color: azure;
+margin-left: 10px;
 }
 
 .button2 {
 background-color: rgb(189, 234, 189);
-  border-radius: 15px;
-  margin-left: 150px;
-  font-family: "Comic Neue", cursive;
-  padding-left: 10px;
-  padding-right: 10px;
+border-radius: 10px;
+font-family: "Comic Neue", cursive;
+position: relative;
+left: 260px;
+border-color: azure;
+}
+
+.overall_card {
+background-color: rgba(97, 181, 241, 0.2);
 }
