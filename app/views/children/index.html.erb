@@ -33,7 +33,7 @@
     <div class="child_card comic-neue-regular">
 
       <div class="image_and_name foto_fit">
-        <%= image_tag child.image_url %>
+        <%= image_tag child.image_url if child.image_url%>
         <p class="child_card_boxes child_name"><%= link_to child.first_name, child_path(child)%></p>
       </div>
 
