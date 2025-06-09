@@ -40,11 +40,11 @@ puts "Creating user"
 # user18 = User.create(first_name: "Andre", last_name: "Seidel", age: 37, gender: "male", email: "andre.seidel@gmail.com", password: "123456", about: "Full-time dad to Clara (5). We’re a creative duo and love artsy playdates. Let’s make some colorful memories!")
 # user19 = User.create(first_name: "Mira", last_name: "Lang", age: 29, gender: "female", email: "mira@gmail.com", password: "123456", about: "Hi, I'm Mira. My daughter Lilly just started walking and we’re eager to make new playground friends.")
 # user20 = User.create(first_name: "Kevin", last_name: "Schuster", age: 34, gender: "male", email: "kevin@gmail.com", password: "123456", about: "Hey! Stay-at-home dad here. I’ve got twins (age 3) and lots of time for playdates, especially in the mornings.")
-user21 = User.create(first_name: "Julia", last_name: "Bauer", age: 31, gender: "female", email: "julia@gmail.com", password: "123456", about: "Mama to Mia (2). We're always around the neighborhood park and would love to meet new play pals.")
-user22 = User.create(first_name: "Thomas", last_name: "Lorenz", age: 39, gender: "male", email: "thomas@gmail.com", password: "123456", about: "My son Nick is 5 and full of questions. We'd love to find a fellow curious buddy to play and learn with.")
-user23 = User.create(first_name: "Rama", last_name: "Bah", age: 33, gender: "female", email: "Rama@gmail.com", password: "123456", about: "Hi everyone! Rama here - mama of Emil. We love books, baking, and climbing frames.")
-user24 = User.create(first_name: "Hakim", last_name: "Scholz", age: 30, gender: "male", email: "hakim@gmail.com", password: "123456", about: "I’m Hakim, dad to Finn (3). We're looking for spontaneous meetups and lots of outdoor fun. Let's connect!")
-user25 = User.create(first_name: "Linh", last_name: "Voigt", age: 35, gender: "female", email: "linh@gmail.com", password: "123456", about: "Mother of three, always juggling something, but always up for a park hangout. Our kids range from 1 to 7.")
+user21 = User.create(first_name: "Julia", last_name: "Bauer", age: 31, gender: 1, email: "julia@gmail.com", password: "123456", about: "Mama to Mia (2). We're always around the neighborhood park and would love to meet new play pals.")
+user22 = User.create(first_name: "Thomas", last_name: "Lorenz", age: 39, gender: 0, email: "thomas@gmail.com", password: "123456", about: "My son Nick is 5 and full of questions. We'd love to find a fellow curious buddy to play and learn with.")
+user23 = User.create(first_name: "Rama", last_name: "Bah", age: 33, gender: 1, email: "Rama@gmail.com", password: "123456", about: "Hi everyone! Rama here - mama of Emil. We love books, baking, and climbing frames.")
+user24 = User.create(first_name: "Hakim", last_name: "Scholz", age: 30, gender: 0, email: "hakim@gmail.com", password: "123456", about: "I’m Hakim, dad to Finn (3). We're looking for spontaneous meetups and lots of outdoor fun. Let's connect!")
+user25 = User.create(first_name: "Linh", last_name: "Voigt", age: 35, gender: 1, email: "linh@gmail.com", password: "123456", about: "Mother of three, always juggling something, but always up for a park hangout. Our kids range from 1 to 7.")
 
 puts "Creating Child"
 # child1= Child.create(user_id: user1, first_name: "Chris", gender: "boy" ,age: 5, about: "Chris is very active and curious. He loves to build sandcastles.")
@@ -133,7 +133,6 @@ puts "Creating request"
 request1 = Request.create(status: "accepted", requester: user21, receiver: user22)
 request2 = Request.create(status: "accepted", requester: user22, receiver: user23)
 request3 = Request.create(status: "rejected", requester: user23, receiver: user21)
-
 
 puts "creating Playgrounds"
 playground1 = Playground.create(name: "Abenteuerlicher Bauspielplatz", address: "Wiener Straße 59B, 10999 Berlin", latitude: "52.494857", longitude: "13.432602")
