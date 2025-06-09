@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   #validates :first_name, :last_name, :age, :gender, :about, presence: true
-  has_many :messages 
+  has_many :messages
   has_many :chats, through: :messages
   has_many :playgrounds, through: :user_playgrounds
   has_many :children
@@ -12,4 +12,8 @@ class User < ApplicationRecord
   has_many :requests_as_receiver, class_name: "Request", foreign_key: :receiver_id, dependent: :destroy
   # still need to figure out how to conect with the chat table
   enum gender: { Male: 0, Female: 1, prefer_not_to_say: 2 }
+
+  def child
+    children.first
+  end
 end
