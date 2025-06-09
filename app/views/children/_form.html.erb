@@ -1,45 +1,32 @@
-<%= simple_form_for(current_user, url: profile_path) do |f| %>
+<%= simple_form_for(@child) do |f| %>
   <div class="drop_downs">
     <div class="single_drop_down">
       <%= f.input :age, prompt: "Select Age" %>
     </div>
 
     <div class="single_drop_down">
-      <%= f.input :gender, collection: ["Boy", "Girl", "Prefer not to say"], prompt: "Select Gender" %>
+      <%= f.input :gender, collection: {"Boy" => "boy", "Girl" => "girl", "Prefer not to say" => "prefer_not_to_say"}, prompt: "Select Gender" %>
     </div>
   </div>
-  <p class="comic-neue-regular profile_about">About Child:</p>
+  <p class="comic-neue-regular profile_about"></p>
   <div class="descriptions characteristics">
-    <% Characteristic.all.each do |characteristic| %>
-      <% selected = @child.self_characteristics.include?(characteristic) %>
-      <input
-        class="tag-selector description-checkbox"
-        type="checkbox"
-        id="description-<%= characteristic.name.parameterize %>"
-        data-characteristic-id="<%= characteristic.id %>"
-        <%= 'checked' if selected %>
-      />
-      <label for="description-<%= characteristic.name.parameterize %>">
-        <%= characteristic.name %>
-      </label>
-    <% end %>
+    <%= f.association :self_characteristics, collection: Characteristic.all, as: :check_boxes,
+                      input_html: { class: "tag-selector description-checkbox" },
+                      item_wrapper_class: 'tag-item' %>
+  </div>
+
+  <div class="about">
+    <%= f.input :about %>
   </div>
 
   <p class="comic-neue-regular profile_about">Preferences:</p>
   <div class="preferences characteristics">
-    <% Characteristic.all.each do |characteristic| %>
-      <% selected = @child.other_characteristics.include?(characteristic) %>
-      <input
-        class="tag-selector description-checkbox"
-        type="checkbox"
-        id="description-<%= characteristic.name.parameterize %>"
-        data-characteristic-id="<%= characteristic.id %>"
-        <%= 'checked' if selected %>
-      />
-      <label for="description-<%= characteristic.name.parameterize %>">
-        <%= characteristic.name %>
-      </label>
-    <% end %>
+    <%= f.association :other_characteristics, collection: Characteristic.all, as: :check_boxes,
+                        input_html: { class: "tag-selector description-checkbox" },
+                        item_wrapper_class: 'tag-item' %>
   </div>
-  <%= f.button :submit %>
+
+  <div class="submit">
+    <%= f.button :submit %>
+  </div>
 <% end %>

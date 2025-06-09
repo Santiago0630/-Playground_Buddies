@@ -2,10 +2,8 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
   devise_for :users
-  resources :children, only: [ :index, :show, :create, :new ]
+  resources :children, only: [ :index, :show, :create, :new, :update ]
   resources :users, only: [:index, :show]
-
-  patch "profile", to: "pages#update_profile"
 
   get "profile", to: "pages#profile"
   resources :requests, only: [:index]
