@@ -6,5 +6,18 @@
 <%= @request.requester.first_name %>
 </div>
 
+<h3> About parent: </h3>
+<p> <%= @request.requester.age %> </p>
+<p> <%= @request.requester.gender %> </p>
+
+
+<h3> About child: </h3>
+<p> <%= @request.requester.children.first.age %> </p>
+<p> <%= @request.requester.children.first.gender %> </p>
+
+
+
+<h3> About us: </h3>
+
 <%= link_to "accept", accept_request_path(@request) %>
 <%= link_to "reject", reject_request_path(@request) %>

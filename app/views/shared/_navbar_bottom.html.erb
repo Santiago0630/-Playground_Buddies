@@ -12,7 +12,7 @@
 
 <div class="navbar-bottom-box" style="<%= navbar_background %>"> 
       <% if user_signed_in? %>
-      <%= link_to "🏠", children_path, class: "navbar-bottom-menu navbar-bottom-home #{"active" if current_page?(new_user_session_path)}" %>
+      <%= link_to "🏠", children_path, class: "navbar-bottom-menu navbar-bottom-home #{"active" if current_page?(children_path)}" %>
       <% else %>
       <%= link_to "🏠", new_user_session_path, class: "navbar-bottom-menu navbar-bottom-home #{"active" if current_page?(new_user_session_path)}" %>
     <% end %>
