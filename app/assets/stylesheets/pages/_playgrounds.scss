@@ -1,0 +1,36 @@
+.map {
+  height: 600px;
+  width: 340px;
+  border-radius: 15px;
+  border: 4px solid rgb(112, 200, 168);
+  display: block;
+  margin: 10px auto;
+}
+
+.form-control {
+  border-radius: 15px;
+  border: 4px solid rgb(112, 200, 168);
+  text-align: center;
+  margin: 10px 5px 10px 25px;
+  background-color: rgba(112, 200, 168, 0.3);
+}
+
+.map_submit {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(80, 83, 84);
+  border: 4px solid;
+  border-color: rgb(112, 200, 168);
+  background-color: rgba(112, 200, 168, 0.3);
+  margin: 10px 25px 10px 5px;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+.map_all {
+  background-color: rgba(112, 200, 168, 0.1);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+}

@@ -1,2 +1,16 @@
-<h1>Playgrounds</h1>
+<div class="map_all">
+  <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :postal_code,
+        params[:postal_code],
+        class: "form-control",
+        placeholder: "Type your postal code"
+        %>
+    <%= submit_tag "Search", name: "", class: "map_submit" %>
+  <% end %>
 
+  <div class="map"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+    data-map-post-code-value="<%= @coordinates.to_json %>"></div>
+</div>
