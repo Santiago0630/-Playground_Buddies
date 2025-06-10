@@ -2,7 +2,7 @@
   <%= form_with url: root_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :postal_code,
         params[:postal_code],
-        class: "form-control",
+        class: "form-control playgrounds_input",
         placeholder: "Type your postal code"
         %>
     <%= submit_tag "Search", name: "", class: "map_submit" %>

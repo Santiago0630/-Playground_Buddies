@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   devise_for :users
   resources :children, only: [ :index, :show, :create, :new, :update ]
   resources :users, only: [:index, :show]
+  resources :playgrounds, only: [:index]
 
   get "profile", to: "pages#profile"
   resources :requests, only: [:index, :show]
-  resources :chats, only: [:show] do 
+  resources :chats, only: [:show] do
     resources :messages, only: [:create]
   end
 

@@ -1,11 +1,11 @@
 <%= simple_form_for(@child) do |f| %>
   <div class="drop_downs">
     <div class="single_drop_down">
-      <%= f.input :age, prompt: "Select Age" %>
+      <%= f.input :age, input_html: {class: "yellow_border"}, prompt: "Select Age" %>
     </div>
 
     <div class="single_drop_down">
-      <%= f.input :gender, collection: {"Boy" => "boy", "Girl" => "girl", "Prefer not to say" => "prefer_not_to_say"}, prompt: "Select Gender" %>
+      <%= f.input :gender, input_html: {class: "yellow_border"}, collection: {"Boy" => "boy", "Girl" => "girl", "Prefer not to say" => "prefer_not_to_say"}, prompt: "Select Gender" %>
     </div>
   </div>
   <p class="comic-neue-regular profile_about"></p>
@@ -16,7 +16,7 @@
   </div>
 
   <div class="about">
-    <%= f.input :about %>
+    <%= f.input :about, input_html: {class: "yellow_border"} %>
   </div>
 
   <p class="comic-neue-regular profile_about">Preferences:</p>
