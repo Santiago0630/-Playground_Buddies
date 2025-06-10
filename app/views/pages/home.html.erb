@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="homepage-wrapper">
+  <div class="homepage_image">
+    <%= image_tag "playground.png" %>
+  </div>
+</div>
+
+<div class="home">
+  <h2 class="homepage_message">Welcome to Playground Buddies</h2>
+  <%= button_to "Get Started", children_path, class: "button_start", method: :get %>
+</div>

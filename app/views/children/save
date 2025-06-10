@@ -36,3 +36,18 @@
         <img class="child_card_img" src="https://media.istockphoto.com/id/1268675353/photo/portrait-of-cute-little-girl-outdoors.jpg?s=612x612&w=0&k=20&c=7q3OKwR4BnYsf2Pflz0hnzLfEdgEz4D8d9rUzIQscqE=" alt="profile_picture">
 <p class="child_card_img"><%= child.image_url %></p>
 <%= image_tag child.image_url %>
+
+#navbar code 
+<li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Messages", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
+          </a>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
