@@ -1,10 +1,13 @@
 .navbar-bottom-box {
-  background-color: rgba(177, 162, 224, 0.387);
+  background-color: #efecf9;
   margin-top: 20px;
   height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .navbar-bottom-menu {
@@ -19,26 +22,42 @@
   text-align: center;
 }
 
-#navbar-bottom-home {
+.navbar-bottom-home {
   border: 3px solid #60b5f1;
   width: 70px;
   height: 50px;
+
+  &.active {
+    background-color: #60b5f1;
+  }
 }
 
 #navbar-bottom-request {
   border: 3px solid #b1a1e1;
   width: 70px;
   height: 50px;
+
+  &.active {
+    background-color: #b1a1e1;
+  }
 }
 
 #navbar-bottom-map {
   border: 3px solid #6fc7a8;
   width: 70px;
   height: 50px;
+
+  &.active {
+    background-color: #6fc7a8;
+  }
 }
 
 #navbar-bottom-profile {
   border: 3px solid #f8dc5a;
   width: 70px;
   height: 50px;
+
+  &.active {
+    background-color: #f8dc5a;
+  }
 }

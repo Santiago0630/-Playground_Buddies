@@ -4,6 +4,19 @@ class MessagesController < ApplicationController
   end
   
   def create
-    @message = Message.create(user_id: current_user, chat_id: @requests.id , content: "")
+    @chat = Chat.find(params[:chat_id])
+    @message = Message.create(message_params)
+    @message.chat = @chat
+    @message.user = current_user
+
+    if @message.save
+      redirect_to chat_path(@chat)
+    end
+  end
+
+  private
+
+  def message_params
+    params.require(:message).permit(:content)
   end
 end

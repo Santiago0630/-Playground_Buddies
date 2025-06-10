@@ -9,6 +9,20 @@ class RequestsController < ApplicationController
     @request = Request.create(requester_id: @request.user, receiver_id: current_user, status: 0)
   end
 
+  def show
+    @request = Request.find(params[:id])
+  end
 
+  def accept
+    @request = Request.find(params[:id])
+    @request.accepted! 
+    Chat.create(request: @request)
+    redirect_to requests_path
+  end
 
+  def reject
+    @request = Request.find(params[:id])
+    @request.rejected! 
+    redirect_to requests_path
+  end
 end
