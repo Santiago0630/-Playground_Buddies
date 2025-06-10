@@ -1,0 +1,10 @@
+<a href="/requests" class="button-back-navigation"><--</a>
+<h1> Heyy </h1>
+<div class="request-show-profile">
+<img class="user-image" src="https://th.bing.com/th/id/OIP.jaCY5SwnrEfiIe5oy_B7HwHaE8?w=244&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Parent Profile Picture">
+<%= @request.requester.children.first.first_name %>
+<%= @request.requester.first_name %>
+</div>
+
+<%= link_to "accept", accept_request_path(@request) %>
+<%= link_to "reject", reject_request_path(@request) %>

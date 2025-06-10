@@ -88,24 +88,18 @@ puts "Creating Child"
 
 # child24 = Child.create(user_id: user18, first_name: "Clara", gender: "girl", age: 5, about: "Clara loves painting and creating little stories while she plays.")
 
-# child25 = Child.create(user_id: user19, first_name: "Lilly", gender: "girl", age: 1, about: "Lilly is curious and loves crawling around on the grass.")
-
-# child26 = Child.create(user_id: user20, first_name: "Noah", gender: "boy", age: 3, about: "Noah loves running in circles and laughing with other kids.")
-# child27 = Child.create(user_id: user20, first_name: "Nina", gender: "girl", age: 3, about: "Nina is a natural climber and always heads straight to the jungle gym.")
-
+child25 = Child.create(user: user22, first_name: "Lily", gender: 1, age: 1, about: "Lilly is curious and loves crawling around on the grass.", image_url: "https://images.pexels.com/photos/8236378/pexels-photo-8236378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+child26 = Child.create(user: user25, first_name: "Noah", gender: 0, age: 3, about: "Noah loves running in circles and laughing with other kids.", image_url: "https://media.istockphoto.com/id/497204343/photo/playful-family-in-the-playground.jpg?s=612x612&w=0&k=20&c=WVC_M75aD6Rez77VZ2r1ks103m4DrjGZNGXOmZQt6ow=")
+child27 = Child.create(user: user22, first_name: "Nina", gender: 1, age: 3, about: "Nina is a natural climber and always heads straight to the jungle gym.", image_url: "https://media.istockphoto.com/id/156019069/photo/mother-and-daughter-having-fun-together-on-playground.jpg?s=612x612&w=0&k=20&c=JFHU42XKQzyKRjGFZvIWAQ9BbRRQsgY9I_UGYR6Tnzw=")
 child28 = Child.create(user: user21, first_name: "Mia", gender: 1, age: 2, about: "Mia is gentle and enjoys watching the other kids before joining in.", image_url: "https://media.istockphoto.com/id/1438462378/photo/close-up-portrait-of-mother-and-daughter.jpg?s=612x612&w=0&k=20&c=cYHY-5PMxY2Zkxcn7WT7-7R4RnwS_anrZXbFsCK-0Eg=")
-# child29 = Child.create(user_id: user21, first_name: "Anna", gender: "girl", age: 4, about: "Anna is adventurous and loves sliding again and again.")
-
+child29 = Child.create(user: user21, first_name: "Anna", gender: 1, age: 4, about: "Anna is adventurous and loves sliding again and again.", image_url: "https://media.istockphoto.com/id/1399807026/photo/father-with-daughter-on-playground-swing.jpg?s=612x612&w=0&k=20&c=tYKR8uWnfK0SCSDd2_0WaWKkUxdAu4DSvyNW_WK2Zhs=")
 child30 = Child.create(user: user22, first_name: "Nick", gender: 0, age: 5, about: "Nick is super talkative and loves asking 'why' about everything.", image_url: "https://media.30seconds.com/tip/lg/Play-Matters-Dads-Why-You-Need-to-Play-With-Your-Kids-Whet-15579-2b5162a120-1618894890.jpg")
-
 child31 = Child.create(user: user23, first_name: "Emil", gender: 0, age: 3, about: "Emil enjoys toy trucks and is always digging in the sandbox.", image_url: "https://media.istockphoto.com/id/1447127590/photo/mother-child-and-happy-piggyback-in-summer-holiday-and-blue-sky-sunshine-and-play-in-a-green.jpg?s=612x612&w=0&k=20&c=hhYG6Y2QU_PZAZ8x9WjzPaI1p3cGO07ABz_AimMi0Hw=")
-# child32 = Child.create(user_id: user23, first_name: "Luisa", gender: "girl", age: 5, about: "Luisa loves dress-up and making new friends.")
-
+child32 = Child.create(user: user23, first_name: "Luisa", gender: 1, age: 5, about: "Luisa loves dress-up and making new friends.", image_url:"https://media.istockphoto.com/id/542016310/photo/having-fun-with-daughter.jpg?s=612x612&w=0&k=20&c=9tqhgc_b9yCuBBmElCbGSaPXsoMlf9u0-6sZHppgZD0=")
 child33 = Child.create(user: user24, first_name: "Finn", gender: 0, age: 3, about: "Finn is full of energy and always looking for a race partner.", image_url: "https://media.istockphoto.com/id/2153015723/de/foto/with-bicycle-having-fun-happy-father-with-son-are-on-the-field-at-summertime.jpg?s=612x612&w=0&k=20&c=8iwSkt18H9sRp23J4ILieqmn8IXPZmuzPWMfCRWYiXY=")
-
-child34 = Child.create(user: user25, first_name: "Nico", gender: 0, age: 1, about: "Nico is still crawling but loves to laugh and watch older kids.", image_url: "https://media.istockphoto.com/id/1471672931/photo/mother-and-son-spend-time-together-and-hugging-gives-a-tulip-flower-on-mothers-day-together.jpg?s=612x612&w=0&k=20&c=1KigzQd5UOVvxnN-b12VnhtBO2WDlnWdMxU6ojObD3o=")
-# child35 = Child.create(user_id: user25, first_name: "Mara", gender: "girl", age: 4, about: "Mara is talkative and loves imaginary tea parties.")
-# child36 = Child.create(user_id: user25, first_name: "Jonah", gender: "boy", age: 7, about: "Jonah is into soccer and always brings a ball to the park.")
+child34 = Child.create(user: user24, first_name: "Nico", gender: 0, age: 1, about: "Nico is still crawling but loves to laugh and watch older kids.", image_url: "https://media.istockphoto.com/id/1471672931/photo/mother-and-son-spend-time-together-and-hugging-gives-a-tulip-flower-on-mothers-day-together.jpg?s=612x612&w=0&k=20&c=1KigzQd5UOVvxnN-b12VnhtBO2WDlnWdMxU6ojObD3o=")
+child35 = Child.create(user: user25, first_name: "Mara", gender: 1, age: 4, about: "Mara is talkative and loves imaginary tea parties.", image_url: "https://media.istockphoto.com/id/494432067/photo/granddaughter-grandfather-and-grandmother-at-playground.jpg?s=612x612&w=0&k=20&c=XpB4LzUrQfoWXcOia9-quSmkiODmDcvGN8uwCKUuS80=")
+child36 = Child.create(user: user25, first_name: "Jonah", gender: 0, age: 7, about: "Jonah is into soccer and always brings a ball to the park.", image_url: "https://media.istockphoto.com/id/1401008220/photo/father-and-son-play-football-young-active-family.jpg?s=612x612&w=0&k=20&c=Vdt-s4gUFPLoRX9yCqrPAgKJbWrW5r1A3D4yT6xG5fw=")
 
 puts "Creating characteristics"
 characteristic1 = Characteristic.create(name: "active")
@@ -118,10 +112,42 @@ characteristic7 = Characteristic.create(name: "chaotic")
 characteristic8 = Characteristic.create(name: "orderly")
 
 puts "Creating descriptions"
-description1 = Description.create(characteristic: characteristic2, child: child28)
-description2 = Description.create(characteristic: characteristic3, child: child30)
-description3 = Description.create(characteristic: characteristic1, child: child31)
-
+description1 = Description.create(characteristic: characteristic5, child: child28)
+description1 = Description.create(characteristic: characteristic3, child: child28)
+description1 = Description.create(characteristic: characteristic8, child: child28)
+description2 = Description.create(characteristic: characteristic4, child: child25)
+description2 = Description.create(characteristic: characteristic5, child: child25)
+description2 = Description.create(characteristic: characteristic8, child: child25)
+description3 = Description.create(characteristic: characteristic4, child: child26)
+description3 = Description.create(characteristic: characteristic5, child: child26)
+description3 = Description.create(characteristic: characteristic1, child: child26)
+description4 = Description.create(characteristic: characteristic4, child: child27)
+description4 = Description.create(characteristic: characteristic2, child: child27)
+description4 = Description.create(characteristic: characteristic6, child: child27)
+description5 = Description.create(characteristic: characteristic5, child: child29)
+description5 = Description.create(characteristic: characteristic3, child: child29)
+description5 = Description.create(characteristic: characteristic7, child: child29)
+description6 = Description.create(characteristic: characteristic8, child: child30)
+description6 = Description.create(characteristic: characteristic2, child: child30)
+description6 = Description.create(characteristic: characteristic4, child: child30)
+description7 = Description.create(characteristic: characteristic1, child: child31)
+description7 = Description.create(characteristic: characteristic3, child: child31)
+description7 = Description.create(characteristic: characteristic7, child: child31)
+description8 = Description.create(characteristic: characteristic2, child: child32)
+description8 = Description.create(characteristic: characteristic4, child: child32)
+description8 = Description.create(characteristic: characteristic6, child: child32)
+description9 = Description.create(characteristic: characteristic1, child: child33)
+description9 = Description.create(characteristic: characteristic4, child: child33)
+description9 = Description.create(characteristic: characteristic6, child: child33)
+description10 = Description.create(characteristic: characteristic8, child: child34)
+description10 = Description.create(characteristic: characteristic2, child: child34)
+description10 = Description.create(characteristic: characteristic4, child: child34)
+description11 = Description.create(characteristic: characteristic8, child: child35)
+description11 = Description.create(characteristic: characteristic2, child: child35)
+description11 = Description.create(characteristic: characteristic5, child: child35)
+description12 = Description.create(characteristic: characteristic3, child: child36)
+description12 = Description.create(characteristic: characteristic7, child: child36)
+description12 = Description.create(characteristic: characteristic1, child: child36)
 
 puts "Creating Preferences"
 preference1 = Preference.create(characteristic: characteristic1, child: child28, age: 2, gender: 1)

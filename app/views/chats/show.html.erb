@@ -1,14 +1,31 @@
+<a href="/requests" class="button-back-navigation"><--</a>
 
+<div class="notification-box">
+        <img class="user-image" src="https://th.bing.com/th/id/OIP.jaCY5SwnrEfiIe5oy_B7HwHaE8?w=244&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Parent Profile Picture">
+        <%#h3> <%= chat.messages.first.content %> 
+      <div class="text-vertical-center"> 
+        
+        <div> 
+          <h1 class="luckiest-guy-regular"> <%= @chat.messages.first.user.children.first.first_name %> </h1>
+        </div> 
+        <div> 
+          <h5 class="comic-neue-regular"> <%= @chat.messages.first.user.first_name %> </h5>
+        </div> 
+    </div>
+</div>
 
+  <div class= "messages-box">
+    <% @chat.messages.each do |message|  %>
+        <p class="message-info"> <%= message.created_at.strftime("%a %b %e at %l:%M %p") %> </p>
+      <div class="messages">
+        <p> <%= message.content %> </p>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<%= simple_form_for [@booking, @message],
-  html: {class: "d-flex"} do |f|
-%>
-  <% other_user = current_user == @booking.restaurant.user ? @booking.user : @booking.restaurant.user %>
-  <%= f.input :content,
-    label: false,
-    placeholder: "Message #{other_user.nickname}",
-    wrapper_html: {class: "flex-grow-1"}
-  %>
-  <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+<div class="message-field">
+<%= simple_form_for [@chat, @message] do |f| %>
+  <div id="send"><%= f.input :content %> <%= f.submit "send", class:"send-button" %></div>
+</div>
 <% end %>

@@ -1,10 +1,22 @@
-<div class="navbar-bottom-box"> 
+<% navbar_background =
+    if current_page?(children_path)
+      "background-color: #dff0fc;"
+    elsif current_page?(requests_path)
+      "background-color: #efecf9;"
+    elsif current_page?(root_path)
+      "background-color: #e2f4ee;"
+    else current_page?(profile_path)
+      "background-color: #fef8dd;"
+    end
+  %>
+
+<div class="navbar-bottom-box" style="<%= navbar_background %>"> 
       <% if user_signed_in? %>
-      <%= link_to "🏠", children_path, class: "navbar-bottom-home", id: "navbar-bottom-home" %>
+      <%= link_to "🏠", children_path, class: "navbar-bottom-menu navbar-bottom-home #{"active" if current_page?(new_user_session_path)}" %>
       <% else %>
-      <%= link_to "🏠", new_user_session_path, class: "navbar-bottom-menu", id: "navbar-bottom-home" %>
+      <%= link_to "🏠", new_user_session_path, class: "navbar-bottom-menu navbar-bottom-home #{"active" if current_page?(new_user_session_path)}" %>
     <% end %>
-    <%= link_to "💬", requests_path, class: "navbar-bottom-menu", id: "navbar-bottom-request" %>
-    <%= link_to "🗺️", root_path, class: "navbar-bottom-menu", id: "navbar-bottom-map" %>
-    <%= link_to "👧🏽", profile_path, class: "navbar-bottom-menu", id: "navbar-bottom-profile" %>
+    <%= link_to "💬", requests_path, class: "navbar-bottom-menu #{"active" if current_page?(requests_path)}", id: "navbar-bottom-request" %>
+    <%= link_to "🗺️", root_path, class: "navbar-bottom-menu #{"active" if current_page?(root_path)}", id: "navbar-bottom-map" %>
+    <%= link_to "👧🏽", profile_path, class: "navbar-bottom-menu #{"active" if current_page?(profile_path)}", id: "navbar-bottom-profile" %>
 </div> 
