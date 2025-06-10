@@ -9,8 +9,14 @@ Rails.application.routes.draw do
   patch "profile", to: "pages#update_profile"
 
   get "profile", to: "pages#profile"
-  resources :requests, only: [:index]
-  resources :chats, only: [:show]
+  resources :requests, only: [:index, :show]
+  resources :chats, only: [:show] do 
+    resources :messages, only: [:create]
+  end
+
+  get "requests/:id/accept", to: "requests#accept", as: :accept_request
+    get "requests/:id/reject", to: "requests#reject", as: :reject_request
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
