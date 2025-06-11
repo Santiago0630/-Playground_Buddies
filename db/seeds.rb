@@ -7,6 +7,9 @@ puts "destroying all preferences"
 Characteristic.destroy_all
 puts "Destroying all characteristics"
 
+Chat.destroy_all
+puts "destroying all chats"
+
 Request.destroy_all
 puts "destroying all requests"
 
