@@ -70,7 +70,7 @@
       <div class="child_card comic-neue-regular">
 
         <div class="image_and_name foto_fit">
-          <%= image_tag child.image_url if child.image_url%>
+          <%= cl_image_tag child.photo.key if child.photo.attached? %>
           <p class="child_card_boxes custom_shadow child_name luckiest-guy-regular"><%= child.first_name %></p>
         </div>
 
