@@ -3,6 +3,20 @@ class ChildrenController < ApplicationController
 
   def index
     @children = Child.all
+    if params[:gender].present?
+      # SELECT * WHERE gender = "boy"
+      @children = @children.where(gender: params[:gender])
+    end
+
+    if params[:min_age].present? || params[:max_age].present?
+      # SELECT * WHERE age > 3 AND age < 7
+      @children = @children.where(age: params[:min_age]..params[:max_age])
+    end
+
+    if params[:preferences].present?
+      my_preferences = current_user.child.other_characteristics.ids
+      @children = @children.joins(descriptions: :characteristic).where(characteristics: { id: my_preferences })
+    end
   end
 
   def show

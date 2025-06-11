@@ -1,5 +1,5 @@
 <div>
-  <p class="back-button"><%= link_to "<<Back to users", children_path %></p>
+  <button class="button1"><%= link_to "<<Back", children_path %></button>
 </div>
 
 <div class="child_card image_and_name foto_fit">
@@ -30,8 +30,5 @@
 </div>
 
 <div>
-  <button class="button1"><%= link_to "<<Back", children_path %></button>
-</div>
-<div>
-  <button class="button2"><%= link_to "Send Request>>", children_path %></button>
+  <button class="button2"><%= link_to "Send Request>>", requests_path %></button>
 </div>

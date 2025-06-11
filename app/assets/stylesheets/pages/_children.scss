@@ -52,6 +52,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(97, 181, 241);
   margin: 4px 4px 4px 4px;
   text-align: center;
+  width: 110px;
 }
 
 a {
@@ -168,4 +169,13 @@ border-color: azure;
 
 .overall_card {
 background-color: rgba(97, 181, 241, 0.2);
+}
+
+.filter {
+  font-family: "Comic Neue", cursive;
+}
+
+.form-control {
+  padding: 5px;
+  width: 77px;
 }

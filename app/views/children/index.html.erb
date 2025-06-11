@@ -13,6 +13,8 @@
 
 </div> %>
 
+
+<div data-controller="toggle">
 <div class="categorys_children">
   <div>
     <a class="category_buttons">All</a>
@@ -23,10 +25,41 @@
   </div>
 
   <div>
-  <a class="category_buttons">Filter</a>
+  <a class="category_buttons" data-action="click->toggle#toggleElement">Filter</a>
   </div>
 </div>
 
+  <div data-toggle-target="toggleableElement" class="d-none filter">
+    <%= form_with url: children_path, method: :get, class: "d-flex" do %>
+          <div>
+            <%= select_tag :gender,
+                  options_for_select(["Gender", "boy", "girl", "prefer_not_to_say"], selected: params[:gender]),
+                  class: "form-control"
+            %>
+          </div>
+          <div>
+            <%= select_tag :min_age,
+                options_for_select(1..12, selected: params[:min_age]),
+                class: "form-control",
+                placeholder: "Min. age"
+            %>
+          </div>
+          <div>
+            <%= number_field_tag :max_age,
+                params[:max_age],
+                class: "form-control",
+                placeholder: "Max. age"
+            %>
+          </div>
+          <div>
+          <%= check_box_tag :preferences,
+                checked: params[:preferences]
+            %>
+          </div>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+</div>
 
 <div>
   <% @children.each do |child| %>

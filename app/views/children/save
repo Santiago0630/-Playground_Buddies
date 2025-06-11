@@ -37,7 +37,7 @@
 <p class="child_card_img"><%= child.image_url %></p>
 <%= image_tag child.image_url %>
 
-#navbar code 
+#navbar code
 <li class="nav-item active">
             <%= link_to "Home", "#", class: "nav-link" %>
           </li>
@@ -51,3 +51,13 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
+
+
+
+              <div>
+            <%= number_field_tag :max_age,
+                params[:max_age],
+                class: "form-control",
+                placeholder: "Max. age"
+            %>
+            
