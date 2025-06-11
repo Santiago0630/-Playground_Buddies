@@ -3,7 +3,7 @@
 </div>
 
 <div class="child_card custom_shadow image_and_name foto_fit">
-  <%= image_tag @child.image_url %>
+  <%= cl_image_tag @child.photo.key %>
   <p class="child_show_name luckiest-guy-regular"><%= @child.first_name %></p>
 </div>
 

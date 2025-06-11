@@ -92,17 +92,67 @@ puts "Creating Child"
 # child24 = Child.create(user_id: user18, first_name: "Clara", gender: "girl", age: 5, about: "Clara loves painting and creating little stories while she plays.")
 
 child25 = Child.create(user: user22, first_name: "Lily", gender: 1, age: 1, about: "Lilly is curious and loves crawling around on the grass.", image_url: "https://images.pexels.com/photos/8236378/pexels-photo-8236378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+child25_photo = URI.parse("https://images.pexels.com/photos/8236378/pexels-photo-8236378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1").open
+child25.photo.attach(io: child25_photo, filename: "child.png", content_type: "image/png")
+child25.save
+
 child26 = Child.create(user: user25, first_name: "Noah", gender: 0, age: 3, about: "Noah loves running in circles and laughing with other kids.", image_url: "https://media.istockphoto.com/id/497204343/photo/playful-family-in-the-playground.jpg?s=612x612&w=0&k=20&c=WVC_M75aD6Rez77VZ2r1ks103m4DrjGZNGXOmZQt6ow=")
+child26_photo = URI.parse("https://media.istockphoto.com/id/497204343/photo/playful-family-in-the-playground.jpg?s=612x612&w=0&k=20&c=WVC_M75aD6Rez77VZ2r1ks103m4DrjGZNGXOmZQt6ow=").open
+child26.photo.attach(io: child26_photo, filename: "child.png", content_type: "image/png")
+child26.save
+
 child27 = Child.create(user: user22, first_name: "Nina", gender: 1, age: 3, about: "Nina is a natural climber and always heads straight to the jungle gym.", image_url: "https://media.istockphoto.com/id/156019069/photo/mother-and-daughter-having-fun-together-on-playground.jpg?s=612x612&w=0&k=20&c=JFHU42XKQzyKRjGFZvIWAQ9BbRRQsgY9I_UGYR6Tnzw=")
+child27_photo = URI.parse("https://media.istockphoto.com/id/156019069/photo/mother-and-daughter-having-fun-together-on-playground.jpg?s=612x612&w=0&k=20&c=JFHU42XKQzyKRjGFZvIWAQ9BbRRQsgY9I_UGYR6Tnzw=").open
+child27.photo.attach(io: child27_photo, filename: "child.png", content_type: "image/png")
+child27.save
+
 child28 = Child.create(user: user21, first_name: "Mia", gender: 1, age: 2, about: "Mia is gentle and enjoys watching the other kids before joining in.", image_url: "https://media.istockphoto.com/id/1438462378/photo/close-up-portrait-of-mother-and-daughter.jpg?s=612x612&w=0&k=20&c=cYHY-5PMxY2Zkxcn7WT7-7R4RnwS_anrZXbFsCK-0Eg=")
+child28_photo = URI.parse("https://media.istockphoto.com/id/1438462378/photo/close-up-portrait-of-mother-and-daughter.jpg?s=612x612&w=0&k=20&c=cYHY-5PMxY2Zkxcn7WT7-7R4RnwS_anrZXbFsCK-0Eg=").open
+child28.photo.attach(io: child28_photo, filename: "child.png", content_type: "image/png")
+child28.save
+
 child29 = Child.create(user: user21, first_name: "Anna", gender: 1, age: 4, about: "Anna is adventurous and loves sliding again and again.", image_url: "https://media.istockphoto.com/id/1399807026/photo/father-with-daughter-on-playground-swing.jpg?s=612x612&w=0&k=20&c=tYKR8uWnfK0SCSDd2_0WaWKkUxdAu4DSvyNW_WK2Zhs=")
+child29_photo = URI.parse("https://media.istockphoto.com/id/1399807026/photo/father-with-daughter-on-playground-swing.jpg?s=612x612&w=0&k=20&c=tYKR8uWnfK0SCSDd2_0WaWKkUxdAu4DSvyNW_WK2Zhs=").open
+child29.photo.attach(io: child29_photo, filename: "child.png", content_type: "image/png")
+child29.save
+
+
 child30 = Child.create(user: user22, first_name: "Nick", gender: 0, age: 5, about: "Nick is super talkative and loves asking 'why' about everything.", image_url: "https://media.30seconds.com/tip/lg/Play-Matters-Dads-Why-You-Need-to-Play-With-Your-Kids-Whet-15579-2b5162a120-1618894890.jpg")
+child30_photo = URI.parse("https://media.30seconds.com/tip/lg/Play-Matters-Dads-Why-You-Need-to-Play-With-Your-Kids-Whet-15579-2b5162a120-1618894890.jpg").open
+child30.photo.attach(io: child30_photo, filename: "child.png", content_type: "image/png")
+child30.save
+
 child31 = Child.create(user: user23, first_name: "Emil", gender: 0, age: 3, about: "Emil enjoys toy trucks and is always digging in the sandbox.", image_url: "https://media.istockphoto.com/id/1447127590/photo/mother-child-and-happy-piggyback-in-summer-holiday-and-blue-sky-sunshine-and-play-in-a-green.jpg?s=612x612&w=0&k=20&c=hhYG6Y2QU_PZAZ8x9WjzPaI1p3cGO07ABz_AimMi0Hw=")
+child31_photo = URI.parse("https://media.istockphoto.com/id/1447127590/photo/mother-child-and-happy-piggyback-in-summer-holiday-and-blue-sky-sunshine-and-play-in-a-green.jpg?s=612x612&w=0&k=20&c=hhYG6Y2QU_PZAZ8x9WjzPaI1p3cGO07ABz_AimMi0Hw=").open
+child31.photo.attach(io: child31_photo, filename: "child.png", content_type: "image/png")
+child31.save
+
+
 child32 = Child.create(user: user23, first_name: "Luisa", gender: 1, age: 5, about: "Luisa loves dress-up and making new friends.", image_url:"https://media.istockphoto.com/id/542016310/photo/having-fun-with-daughter.jpg?s=612x612&w=0&k=20&c=9tqhgc_b9yCuBBmElCbGSaPXsoMlf9u0-6sZHppgZD0=")
+child32_photo = URI.parse("https://media.istockphoto.com/id/542016310/photo/having-fun-with-daughter.jpg?s=612x612&w=0&k=20&c=9tqhgc_b9yCuBBmElCbGSaPXsoMlf9u0-6sZHppgZD0=").open
+child32.photo.attach(io: child32_photo, filename: "child.png", content_type: "image/png")
+child32.save
+
 child33 = Child.create(user: user24, first_name: "Finn", gender: 0, age: 3, about: "Finn is full of energy and always looking for a race partner.", image_url: "https://media.istockphoto.com/id/2153015723/de/foto/with-bicycle-having-fun-happy-father-with-son-are-on-the-field-at-summertime.jpg?s=612x612&w=0&k=20&c=8iwSkt18H9sRp23J4ILieqmn8IXPZmuzPWMfCRWYiXY=")
+child33_photo = URI.parse("https://media.istockphoto.com/id/2153015723/de/foto/with-bicycle-having-fun-happy-father-with-son-are-on-the-field-at-summertime.jpg?s=612x612&w=0&k=20&c=8iwSkt18H9sRp23J4ILieqmn8IXPZmuzPWMfCRWYiXY=").open
+child33.photo.attach(io: child33_photo, filename: "child.png", content_type: "image/png")
+child33.save
+
+
 child34 = Child.create(user: user24, first_name: "Nico", gender: 0, age: 1, about: "Nico is still crawling but loves to laugh and watch older kids.", image_url: "https://media.istockphoto.com/id/1471672931/photo/mother-and-son-spend-time-together-and-hugging-gives-a-tulip-flower-on-mothers-day-together.jpg?s=612x612&w=0&k=20&c=1KigzQd5UOVvxnN-b12VnhtBO2WDlnWdMxU6ojObD3o=")
+child34_photo = URI.parse("https://media.istockphoto.com/id/1471672931/photo/mother-and-son-spend-time-together-and-hugging-gives-a-tulip-flower-on-mothers-day-together.jpg?s=612x612&w=0&k=20&c=1KigzQd5UOVvxnN-b12VnhtBO2WDlnWdMxU6ojObD3o=").open
+child34.photo.attach(io: child34_photo, filename: "child.png", content_type: "image/png")
+child34.save
+
 child35 = Child.create(user: user25, first_name: "Mara", gender: 1, age: 4, about: "Mara is talkative and loves imaginary tea parties.", image_url: "https://media.istockphoto.com/id/494432067/photo/granddaughter-grandfather-and-grandmother-at-playground.jpg?s=612x612&w=0&k=20&c=XpB4LzUrQfoWXcOia9-quSmkiODmDcvGN8uwCKUuS80=")
+child35_photo = URI.parse("https://media.istockphoto.com/id/494432067/photo/granddaughter-grandfather-and-grandmother-at-playground.jpg?s=612x612&w=0&k=20&c=XpB4LzUrQfoWXcOia9-quSmkiODmDcvGN8uwCKUuS80=").open
+child35.photo.attach(io: child35_photo, filename: "child.png", content_type: "image/png")
+child35.save
+
 child36 = Child.create(user: user25, first_name: "Jonah", gender: 0, age: 7, about: "Jonah is into soccer and always brings a ball to the park.", image_url: "https://media.istockphoto.com/id/1401008220/photo/father-and-son-play-football-young-active-family.jpg?s=612x612&w=0&k=20&c=Vdt-s4gUFPLoRX9yCqrPAgKJbWrW5r1A3D4yT6xG5fw=")
+child36_photo = URI.parse("https://media.istockphoto.com/id/1401008220/photo/father-and-son-play-football-young-active-family.jpg?s=612x612&w=0&k=20&c=Vdt-s4gUFPLoRX9yCqrPAgKJbWrW5r1A3D4yT6xG5fw=").open
+child36.photo.attach(io: child36_photo, filename: "child.png", content_type: "image/png")
+child36.save
 
 puts "Creating characteristics"
 characteristic1 = Characteristic.create(name: "active")

@@ -1,5 +1,5 @@
 <div class="profile_all">
-  <%= image_tag current_user.child.image_url, class: "profile_img" %>
+  <%= cl_image_tag current_user.child.photo.key, class: "profile_img" %>
   <div class="profile_img_child_name luckiest-guy-regular">
     <%= current_user.child.first_name %>
   </div>
