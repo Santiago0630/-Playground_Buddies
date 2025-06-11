@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <%= link_to children_path, class: "icon_navbar navbar-bottom-menu navbar-bottom-home #{"active" if current_page?(children_path)}" do %>
+    <i class="fa-solid fa-house"></i>
+  <% end %>
+<% else %>
+  <%= link_to "🏠", new_user_session_path, class: "navbar-bottom-menu navbar-bottom-home #{"active" if current_page?(new_user_session_path)}" %>
+<% end %>

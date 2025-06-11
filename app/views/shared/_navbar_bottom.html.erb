@@ -3,7 +3,7 @@
       "background-color: #dff0fc;"
     elsif current_page?(requests_path)
       "background-color: #efecf9;"
-    elsif current_page?(root_path)
+    elsif current_page?(playgrounds_path)
       "background-color: #e2f4ee;"
     else current_page?(profile_path)
       "background-color: #fef8dd;"
@@ -11,12 +11,16 @@
   %>
 
 <div class="navbar-bottom-box" style="<%= navbar_background %>">
-      <% if user_signed_in? %>
-      <%= link_to "🏠", children_path, class: "navbar-bottom-menu navbar-bottom-home #{"active" if current_page?(children_path)}" %>
-      <% else %>
-      <%= link_to "🏠", new_user_session_path, class: "navbar-bottom-menu navbar-bottom-home #{"active" if current_page?(new_user_session_path)}" %>
+      <%= link_to user_signed_in? ? children_path : new_user_session_path, class: "icon_navbar navbar-bottom-menu navbar-bottom-home #{"active" if current_page?(children_path)}" do %>
+        <i class="fa-solid fa-house"></i>
+      <% end %>
+    <%= link_to requests_path, class: "icon_navbar navbar-bottom-menu #{"active" if current_page?(requests_path)}", id: "navbar-bottom-request" do %>
+      <i class="fa-solid fa-comments"></i>
     <% end %>
-    <%= link_to "💬", requests_path, class: "navbar-bottom-menu #{"active" if current_page?(requests_path)}", id: "navbar-bottom-request" %>
-    <%= link_to "🗺️", playgrounds_path, class: "navbar-bottom-menu #{"active" if current_page?(playgrounds_path)}", id: "navbar-bottom-map" %>
-    <%= link_to "👧🏽", profile_path, class: "navbar-bottom-menu #{"active" if current_page?(profile_path)}", id: "navbar-bottom-profile" %>
+    <%= link_to playgrounds_path, class: "icon_navbar navbar-bottom-menu #{"active" if current_page?(playgrounds_path)}", id: "navbar-bottom-map" do %>
+      <i class="fa-solid fa-map-location-dot"></i>
+    <% end %>
+    <%= link_to profile_path, class: "icon_navbar navbar-bottom-menu #{"active" if current_page?(profile_path)}", id: "navbar-bottom-profile" do %>
+      <i class="fa-solid fa-user"></i>
+    <% end %>
 </div>
