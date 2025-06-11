@@ -4,7 +4,7 @@
 
     <% @pending_requests.each do |request| %>
       <%= link_to request_path(request) do %>
-        <div class="chat-box">
+        <div class="chat-box two_in_one_row">
             <%= image_tag request.requester.children.first.image_url, class: "user-image" %>
           <%# <img class="user-image" src="https://th.bing.com/th/id/OIP.jaCY5SwnrEfiIe5oy_B7HwHaE8?w=244&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Parent Profile Picture"> %>
           <div class="text-vertical-center">
@@ -29,7 +29,7 @@
   <h5 style="margin: 20px" class="luckiest-guy-regular"> All Chats </h5>
   <% @chats.each do |chat| %>
     <%= link_to chat_path(chat) do %>
-      <div class="notification-box">
+      <div class="notification-box two_in_one_row">
       <%= image_tag chat.request.receiver == current_user ? chat.request.requester.children.first.image_url : chat.request.receiver.children.first.image_url, class: "user-image" %>
         <%# <img class="user-image" src="https://th.bing.com/th/id/OIP.jaCY5SwnrEfiIe5oy_B7HwHaE8?w=244&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Parent Profile Picture"> %>
         <%#h3> <%= chat.messages.first.content %>
