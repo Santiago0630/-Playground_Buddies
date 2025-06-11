@@ -6,7 +6,9 @@ class RequestsController < ApplicationController
   end
 
   def create
-    @request = Request.create(requester: @request.user, receiver: current_user, status: 0)
+    receiver = User.find(params[:user_id])
+    @request = Request.create(requester: current_user, receiver: receiver, status: 0)
+    redirect_to children_path
   end
 
   def show
