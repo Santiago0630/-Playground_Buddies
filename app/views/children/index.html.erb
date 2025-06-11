@@ -17,11 +17,10 @@
 <div data-controller="toggle">
 <div class="categorys_children">
   <div>
-    <a class="category_buttons">All</a>
+    <%= link_to "All", children_path, class: "category_buttons" %>
   </div>
-
   <div>
-  <a class="category_buttons">Liked Playgrounds</a>
+  <%= link_to "Requests #{@notifications}", requests_path,  class: "category_buttons" %>
   </div>
 
   <div>
@@ -33,22 +32,23 @@
     <%= form_with url: children_path, method: :get, class: "d-flex" do %>
           <div>
             <%= select_tag :gender,
-                  options_for_select(["Gender", "boy", "girl", "prefer_not_to_say"], selected: params[:gender]),
-                  class: "form-control"
+                  options_for_select(["boy", "girl", "prefer_not_to_say"], selected: params[:gender]),
+                  class: "form-control",
+                  prompt: "Gender"
             %>
           </div>
           <div>
             <%= select_tag :min_age,
                 options_for_select(1..12, selected: params[:min_age]),
                 class: "form-control",
-                placeholder: "Min. age"
+                prompt: "Min. age"
             %>
           </div>
           <div>
-            <%= number_field_tag :max_age,
-                params[:max_age],
+            <%= select_tag :max_age,
+                options_for_select(1..12, selected: params[:max_age]),
                 class: "form-control",
-                placeholder: "Max. age"
+                prompt: "Max. age"
             %>
           </div>
           <div>
@@ -63,22 +63,24 @@
 
 <div>
   <% @children.each do |child| %>
-    <div class="child_card comic-neue-regular">
+    <%= link_to child_path(child) do %>
+      <div class="child_card comic-neue-regular">
 
-      <div class="image_and_name foto_fit">
-        <%= image_tag child.image_url if child.image_url%>
-        <p class="child_card_boxes child_name luckiest-guy-regular"><%= link_to child.first_name, child_path(child)%></p>
+        <div class="image_and_name foto_fit">
+          <%= image_tag child.image_url if child.image_url%>
+          <p class="child_card_boxes custom_shadow child_name luckiest-guy-regular"><%= child.first_name %></p>
+        </div>
+
+        <div class="age_and_gender">
+          <p class="child_card_boxes custom_shadow"><%= child.age %></p>
+          <p class="child_card_boxes custom_shadow"><%= child.gender %></p>
+        </div>
+
+        <div class="child_card_boxes custom_shadow">
+          <p><%= child.about %></p>
+        </div>
+
       </div>
-
-      <div class="age_and_gender">
-        <p class="child_card_boxes"><%= child.age %></p>
-        <p class="child_card_boxes"><%= child.gender %></p>
-      </div>
-
-      <div class="child_card_boxes">
-        <%= child.about %>
-      </div>
-
-    </div>
+    <% end %>
   <% end %>
 </div>

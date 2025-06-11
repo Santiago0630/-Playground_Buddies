@@ -9,18 +9,19 @@
     <%= current_user.last_name %>
   </div>
 
-  <p class="comic-neue-regular profile_about">About Parent:</p>
+  <div class="profile_background custom_shadow">
+    <p class="comic-neue-regular profile_about">About Parent:</p>
 
-  <div class="two_in_one_row">
-    <div class="about_parent">
-      <%= current_user.age %>
+    <div class="two_in_one_row">
+      <div class="about_parent">
+        <%= current_user.age %>
+      </div>
+      <div class="about_parent">
+        <%= current_user.gender%>
+      </div>
     </div>
-    <div class="about_parent">
-      <%= current_user.gender%>
-    </div>
+
+    <p class="comic-neue-regular profile_about">About Child:</p>
+    <%= render 'children/form', child: @child %>
   </div>
-
-  <p class="comic-neue-regular profile_about">About Child:</p>
-  <%= render 'children/form', child: @child %>
-
 </div>
