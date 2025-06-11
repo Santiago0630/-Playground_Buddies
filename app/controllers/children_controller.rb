@@ -3,6 +3,7 @@ class ChildrenController < ApplicationController
 
   def index
     @children = Child.all
+    @notifications = current_user.requests_as_receiver.where(status: 0).count
     if params[:gender].present?
       # SELECT * WHERE gender = "boy"
       @children = @children.where(gender: params[:gender])
