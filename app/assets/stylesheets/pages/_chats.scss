@@ -1,7 +1,5 @@
 .chat-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 20px; 
+  margin: 20px;
   background-color: rgb(177, 162, 224);
   border-radius: 15px;
   padding: 10px;
@@ -9,9 +7,7 @@
 }
 
 .notification-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 20px; 
+  margin: 20px;
   background-color: rgba(177, 162, 224, 0.387);
   border-radius: 15px;
   padding: 10px;
