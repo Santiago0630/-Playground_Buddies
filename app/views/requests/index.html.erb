@@ -35,10 +35,10 @@
         <div class="text-vertical-center"> 
         
           <div> 
-            <h1 class="luckiest-guy-regular"> <%= chat.messages.first.user.children.first.first_name %> </h1>
+            <h1 class="luckiest-guy-regular"> <%= chat.request.receiver == current_user ? chat.request.requester.children.first.first_name : chat.request.receiver.children.first.first_name%> </h1>
           </div> 
           <div> 
-            <h5 class="comic-neue-regular"> <%= chat.messages.first.user.first_name %> </h5>
+            <h5 class="comic-neue-regular"> <%= chat.request.receiver == current_user ? chat.request.requester.first_name : chat.request.receiver.first_name %> </h5>
           </div> 
         </div>
       </div>
