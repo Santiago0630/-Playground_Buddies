@@ -8,7 +8,7 @@
     <%= submit_tag "Search", name: "", class: "map_submit" %>
   <% end %>
 
-  <div class="map"
+  <div class="map custom_shadow"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
