@@ -161,13 +161,84 @@ request2 = Request.create(status: "accepted", requester: user22, receiver: user2
 request3 = Request.create(status: "rejected", requester: user23, receiver: user21)
 
 puts "creating Playgrounds"
-playground1 = Playground.create(name: "Abenteuerlicher Bauspielplatz", address: "Wiener Straße 59B, 10999 Berlin")
-playground2 = Playground.create(name: "Kolle 37 Adventure Playground", address: "Kollwitzstraße 35, 10405 Berlin")
-playground3 = Playground.create(name: "Mauerpark Playground", address: "Gleimstraße 55, 10437 Berlin")
-playground4 = Playground.create(name: "Volkspark Friedrichshain Playground", address: "Am Friedrichshain 1, 10407 Berlin")
-playground5 = Playground.create(name: "Hasenheide Playground", address: "Hasenheide 82, 10967 Berlin")
-playground6 = Playground.create(name: "Pekinger Platz Playground", address: "Pekinger Platz, 13349 Berlin")
-playground7 = Playground.create(name: "Spielplatz an der Marie", address: "Marie-Elisabeth-Lüders-Straße 3, 10625 Berlin")
-playground8 = Playground.create(name: "Plänterwald Forest Playground", address: "Kiehnwerderallee, 12437 Berlin")
-playground9 = Playground.create(name: "Boxhagener Platz Playground", address: "Grünberger Str. 75, 10245 Berlin")
-playground10 = Playground.create(name: "Wasserturmplatz Playground", address: "Knaackstraße 23, 10405 Berlin")
+# playground1 = Playground.create(name: "Abenteuerlicher Bauspielplatz", address: "Wiener Straße 59B, 10999 Berlin")
+# playground2 = Playground.create(name: "Kolle 37 Adventure Playground", address: "Kollwitzstraße 35, 10405 Berlin")
+# playground3 = Playground.create(name: "Mauerpark Playground", address: "Gleimstraße 55, 10437 Berlin")
+# playground4 = Playground.create(name: "Volkspark Friedrichshain Playground", address: "Am Friedrichshain 1, 10407 Berlin")
+# playground5 = Playground.create(name: "Hasenheide Playground", address: "Hasenheide 82, 10967 Berlin")
+# playground6 = Playground.create(name: "Pekinger Platz Playground", address: "Pekinger Platz, 13349 Berlin")
+# playground7 = Playground.create(name: "Spielplatz an der Marie", address: "Marie-Elisabeth-Lüders-Straße 3, 10625 Berlin")
+# playground8 = Playground.create(name: "Plänterwald Forest Playground", address: "Kiehnwerderallee, 12437 Berlin")
+# playground9 = Playground.create(name: "Boxhagener Platz Playground", address: "Grünberger Str. 75, 10245 Berlin")
+# playground10 = Playground.create(name: "Wasserturmplatz Playground", address: "Knaackstraße 23, 10405 Berlin")
+
+require "json"
+require "open-uri"
+response = JSON.parse(URI.parse("https://api.geoapify.com/v2/places?categories=leisure.playground&filter=rect:13.355233578950632,52.56154976754171,13.465826421052938,52.48713420198383&limit=60&apiKey=c824c03d8d584cd2a5d8c9fd733285ba").read)
+response["features"].each do |playground|
+  name = playground["properties"]["name"]
+  adress = playground["properties"]["address_line2"]
+  description = playground["properties"]["description"].presence || playground_descriptions = [
+  "This is a great playground for kids who love to climb.",
+  "There are plenty of shady spots for hot days.",
+  "Perfect for toddlers learning to balance.",
+  "You’ll find lots of swings for every age.",
+  "This playground has a fun pirate ship theme.",
+  "Great for playing hide and seek around the towers.",
+  "There are musical toys that kids love to bang and chime.",
+  "Ideal for little adventurers who love tunnels and bridges.",
+  "A lovely spot where you can often see birds in the trees.",
+  "The slide here is tall and super fast!",
+  "A calm place to relax while the kids play safely.",
+  "You can bring a picnic—there are lots of tables nearby.",
+  "Best spot for spinning rides and dizzy giggles.",
+  "There’s a small splash area for summer fun.",
+  "Kids can run wild across the rope bridges.",
+  "A quiet playground tucked away from busy streets.",
+  "You can hear birdsong while swinging here.",
+  "Great for imaginative play with playhouses and kitchens.",
+  "It’s always clean and well-maintained.",
+  "Perfect for making new friends—lots of local kids come here.",
+  "This playground is fenced in for added safety.",
+  "A great place to let off steam after school.",
+  "It has equipment for both little ones and older kids.",
+  "There’s a safe rubber floor in case of tumbles.",
+  "Nice wide paths for strollers and scooters.",
+  "This playground has a fun jungle theme.",
+  "A good place to fly kites on the nearby field.",
+  "Kids love the big climbing net here.",
+  "Great place to watch the sunset while they play.",
+  "The merry-go-round is always a hit!",
+  "There’s a cool telescope at the top of the tower.",
+  "Lots of colorful artwork brightens the area.",
+  "It feels like a little forest adventure playground.",
+  "Ideal for playing tag across open space.",
+  "The sandpit here is huge and full of toys.",
+  "Bring chalk—the pavement is perfect for drawing.",
+  "There’s a nature trail right next to it.",
+  "The zip line is short but super fun.",
+  "Lots of parents hang out here in the mornings.",
+  "A fun place to bring scooters or small bikes.",
+  "The musical panels are perfect for noisy play.",
+  "There are always friendly dogs walking nearby.",
+  "You’ll find benches in the sun and shade.",
+  "Great spot for watching birds and squirrels.",
+  "This playground feels really open and breezy.",
+  "The spinning toys are low enough for toddlers.",
+  "Nice soft grass surrounds the play area.",
+  "There’s a community garden next door.",
+  "The view from the climbing tower is fantastic.",
+  "It’s usually not too crowded on weekdays.",
+  "Older kids will love the challenging climbing wall.",
+  "There’s a gentle hill that’s great for rolling.",
+  "Families often bring snacks to share here.",
+  "There’s a puppet stage for impromptu shows.",
+  "Perfect for pretend play with themed structures.",
+  "There are lots of chirping birds in the morning.",
+  "Kids can build forts out of giant foam blocks.",
+  "It’s a good spot for stroller walks and play.",
+  "This playground has a really friendly vibe.",
+  "Perfect for a quick break during a nature walk."
+  ].sample
+  Playground.create(name: name, address: adress, description: description)
+end

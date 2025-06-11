@@ -1,5 +1,5 @@
 <div class="map_all">
-  <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+  <%= form_with url: playgrounds_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :postal_code,
         params[:postal_code],
         class: "form-control playgrounds_input",

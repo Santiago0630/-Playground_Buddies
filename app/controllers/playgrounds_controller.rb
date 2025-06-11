@@ -5,6 +5,15 @@ class PlaygroundsController < ApplicationController
       results = Geocoder.search(params[:postal_code])
       germany = results.find { |result| result.country == "Germany" }
       @coordinates = [germany.longitude, germany.latitude]
+      @playgrounds = Playground.near([germany.latitude, germany.longitude,], 2)
+
+      @markers = @playgrounds.geocoded.map do |playground|
+        {
+          lat: playground.latitude,
+          lng: playground.longitude,
+          info_window_html: render_to_string(partial: "info_window", locals: {playground: playground})
+        }
+      end
     else
       @coordinates = [13.4050, 52.5200]
       @playgrounds = Playground.all
@@ -12,7 +21,8 @@ class PlaygroundsController < ApplicationController
       @markers = @playgrounds.geocoded.map do |playground|
         {
           lat: playground.latitude,
-          lng: playground.longitude
+          lng: playground.longitude,
+          info_window_html: render_to_string(partial: "info_window", locals: {playground: playground})
         }
       end
     end
