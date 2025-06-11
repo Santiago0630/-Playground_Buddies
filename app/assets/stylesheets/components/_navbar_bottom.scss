@@ -26,9 +26,11 @@
   border: 3px solid #60b5f1;
   width: 70px;
   height: 50px;
+  color: #60b5f1;
 
   &.active {
     background-color: #60b5f1;
+    color: white;
   }
 }
 
@@ -36,9 +38,11 @@
   border: 3px solid #b1a1e1;
   width: 70px;
   height: 50px;
+  color: #b1a1e1;
 
   &.active {
     background-color: #b1a1e1;
+    color: white;
   }
 }
 
@@ -46,9 +50,11 @@
   border: 3px solid #6fc7a8;
   width: 70px;
   height: 50px;
+  color: #6fc7a8;
 
   &.active {
     background-color: #6fc7a8;
+    color: white;
   }
 }
 
@@ -56,8 +62,17 @@
   border: 3px solid #f8dc5a;
   width: 70px;
   height: 50px;
+  color: #f8dc5a;
 
   &.active {
     background-color: #f8dc5a;
+    color: white;
   }
+}
+
+.icon_navbar {
+  font-size: 30px;
+  display: flex;
+  justify-content: center; // Y axis
+  align-items: center; // x axis
 }
