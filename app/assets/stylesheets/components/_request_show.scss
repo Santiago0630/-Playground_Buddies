@@ -1,3 +1,30 @@
 .request-show-profile {
   background-color: #e1dbf3;
 }
+
+.show-requests-box {
+  border: 3px solid #c1b5e6;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 15px;
+}
+
+.headers-show-request {
+  margin-left: 15px;
+}
+
+.request-accept-button {
+  border: 3px solid #70c7a8;
+  border-radius: 15px;
+  background-color: #e2f4ee;
+  padding: 10px;
+  margin: 15px;
+}
+
+.request-reject-button {
+  border: 3px solid #ee7e72;
+  border-radius: 15px;
+  background-color: #fce7e3;
+  padding: 10px;
+  margin: 15px;
+}
