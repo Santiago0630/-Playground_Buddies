@@ -15,50 +15,53 @@
 
 
 <div data-controller="toggle">
-<div class="categorys_children">
-  <div>
-    <%= link_to "All", children_path, class: "category_buttons" %>
-  </div>
-  <div>
-  <%= link_to "Requests #{@notifications}", requests_path,  class: "category_buttons" %>
-  </div>
+  <div class="categorys_children">
+    <div>
+      <%= link_to "All", children_path, class: "category_buttons" %>
+    </div>
+    <div>
+    <%= link_to "Requests #{@notifications}", requests_path,  class: "category_buttons" %>
+    </div>
 
-  <div>
-  <a class="category_buttons" data-action="click->toggle#toggleElement">Filter</a>
+    <div>
+    <a class="category_buttons" data-action="click->toggle#toggleElement">Filter</a>
+    </div>
   </div>
-</div>
 
   <div data-toggle-target="toggleableElement" class="d-none filter">
-    <%= form_with url: children_path, method: :get, class: "d-flex" do %>
-          <div>
-            <%= select_tag :gender,
-                  options_for_select(["boy", "girl", "prefer_not_to_say"], selected: params[:gender]),
-                  class: "form-control",
-                  prompt: "Gender"
-            %>
-          </div>
-          <div>
-            <%= select_tag :min_age,
-                options_for_select(1..12, selected: params[:min_age]),
-                class: "form-control",
-                prompt: "Min. age"
-            %>
-          </div>
-          <div>
-            <%= select_tag :max_age,
-                options_for_select(1..12, selected: params[:max_age]),
-                class: "form-control",
-                prompt: "Max. age"
-            %>
-          </div>
-          <div>
-          <%= check_box_tag :preferences,
-                checked: params[:preferences]
-            %>
-          </div>
-        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-      <% end %>
-    </div>
+    <%= form_with url: children_path, method: :get, class: "filter_form" do %>
+      <div>
+        <%= select_tag :gender,
+          options_for_select(["boy", "girl", "prefer_not_to_say"], selected: params[:gender]),
+          class: "form-control filter_single",
+          prompt: "Gender"
+        %>
+      </div>
+      <div class="filter_age_row">
+        <div>
+          <%= select_tag :min_age,
+              options_for_select(1..12, selected: params[:min_age]),
+              class: "form-control filter_single",
+              prompt: "min. age"
+          %>
+        </div>
+        <div>
+          <%= select_tag :max_age,
+              options_for_select(1..12, selected: params[:max_age]),
+              class: "form-control filter_single",
+              prompt: "max. age"
+          %>
+        </div>
+      </div>
+      <div class="filter_preference">
+        <%= check_box_tag :preferences,
+              checked: params[:preferences]
+          %>
+        <%= label_tag "Preferences" %>
+      </div>
+      <%= submit_tag "Search", name: "", class: "filter_btn" %>
+    <% end %>
+  </div>
 </div>
 
 <div>
