@@ -45,8 +45,8 @@
             %>
           </div>
           <div>
-            <%= number_field_tag :max_age,
-                params[:max_age],
+            <%= select_tag :max_age,
+                options_for_select(1..12, selected: params[:max_age]),
                 class: "form-control",
                 placeholder: "Max. age"
             %>
