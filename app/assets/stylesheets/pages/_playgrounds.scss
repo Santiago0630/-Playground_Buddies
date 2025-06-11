@@ -34,3 +34,21 @@
   padding: 10px;
   margin: 0px 10px 10px 10px;
 }
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(80, 83, 84);
+}
+
+.playground_adress {
+  background-color: rgba(112, 200, 168, 0.2);
+  padding: 5px;
+  border-radius: 15px;
+}
