@@ -16,7 +16,7 @@
 </div>
 
 <div class="container chat">
-  <%#= turbo_stream_from "booking_#{@booking.id}_messages" %>
+  <%= turbo_stream_from "chat_#{@chat.id}_messages" %>
   <div id="messages" class="messages">
     <% @chat.messages.each do |message| %>
       <%= render "messages/message", message: message, user: current_user %>
