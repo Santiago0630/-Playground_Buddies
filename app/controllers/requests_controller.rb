@@ -13,6 +13,8 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
+    @parent = @request.requester
+    @child = @parent.children.first
   end
 
   def accept

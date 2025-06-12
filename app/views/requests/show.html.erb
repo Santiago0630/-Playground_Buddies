@@ -1,30 +1,35 @@
-<a href="/requests" class="button-back-navigation"><--</a>
-
-<div class="request-show-profile">
-<img class="user-image" src="https://th.bing.com/th/id/OIP.jaCY5SwnrEfiIe5oy_B7HwHaE8?w=244&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Parent Profile Picture">
-<%= @request.requester.children.first.first_name %>
-<%= @request.requester.first_name %>
+<div>
+  <button class="request_button1"><%= link_to "Back", requests_path %></button>
 </div>
 
-<h3 class="headers-show-request"> About parent: </h3>
-<div class="two_in_one_row">
-<p class="show-requests-box"> <%= @request.requester.age %> </p>
-<p class="show-requests-box"> <%= @request.requester.gender %> </p>
+<div class="request_child_card custom_shadow image_and_name request_foto_fit">
+  <%= cl_image_tag @child.photo.key %>
+  <p class="request_child_show_name luckiest-guy-regular"><%= @child.first_name %></p>
 </div>
 
-<h3 class="headers-show-request"> About child: </h3>
+<div class="request_overall_card">
+    <p class="about_show_page">About <%= @parent.first_name %></p>
+    <div class="age_and_gender">
+            <p class="request_child_card_boxes"><%= @parent.age %></p>
+            <p class="request_child_card_boxes"><%= @parent.gender %></p>
+    </div>
 
-<div class="two_in_one_row">
-<p class="show-requests-box"> <%= @request.requester.children.first.age %> </p>
-<p class="show-requests-box"> <%= @request.requester.children.first.gender %> </p>
-<% @request.requester.child.self_characteristics.each do |characteristic| %>
-        <p class="show-requests-box"> <%= characteristic.name %> </p>
+  <p class="about_show_page">About <%= @child.first_name %></p>
+    <div class="age_and_gender">
+      <p class="request_child_card_boxes"><%= @child.age %></p>
+      <p class="request_child_card_boxes"><%= @child.gender %></p>
+
+      <% @child.self_characteristics.each do |characteristic| %>
+        <p class="request_child_card_boxes_full"><%= characteristic.name %></p>
       <% end %>
+    </div>
+  <div>
+    <p class="about_show_page">About Us </p>
+    <p class="request_about_us" ><%= @parent.about %></p>
+  </div>
 </div>
 
-<h3 class="headers-show-request"> About us: </h3>
-<p class="show-requests-box"> <%= @request.requester.about %> <%= @request.requester.children.first.about %> </p>
-
-
-<%= link_to "accept", accept_request_path(@request), class:"request-accept-button" %> 
-<%= link_to "reject", reject_request_path(@request), class:"request-reject-button" %> 
+<div class="request_buttons">
+  <%= link_to "Accept", accept_request_path(@request), class:"request-accept-button" %>
+  <%= link_to "Reject", reject_request_path(@request), class:"request-reject-button" %>
+</div>
