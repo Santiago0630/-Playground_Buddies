@@ -139,7 +139,7 @@ child33.photo.attach(io: child33_photo, filename: "child.png", content_type: "im
 child33.save
 
 
-child34 = Child.create(user: user24, first_name: "Nico", gender: 0, age: 1, about: "Nico is still crawling but loves to laugh and watch older kids.", image_url: "https://media.istockphoto.com/id/1471672931/photo/mother-and-son-spend-time-together-and-hugging-gives-a-tulip-flower-on-mothers-day-together.jpg?s=612x612&w=0&k=20&c=1KigzQd5UOVvxnN-b12VnhtBO2WDlnWdMxU6ojObD3o=")
+child34 = Child.create(user: user24, first_name: "Nico", gender: 0, age: 5, about: "Nico is still crawling but loves to laugh and watch older kids.", image_url: "https://media.istockphoto.com/id/1471672931/photo/mother-and-son-spend-time-together-and-hugging-gives-a-tulip-flower-on-mothers-day-together.jpg?s=612x612&w=0&k=20&c=1KigzQd5UOVvxnN-b12VnhtBO2WDlnWdMxU6ojObD3o=")
 child34_photo = URI.parse("https://media.istockphoto.com/id/1471672931/photo/mother-and-son-spend-time-together-and-hugging-gives-a-tulip-flower-on-mothers-day-together.jpg?s=612x612&w=0&k=20&c=1KigzQd5UOVvxnN-b12VnhtBO2WDlnWdMxU6ojObD3o=").open
 child34.photo.attach(io: child34_photo, filename: "child.png", content_type: "image/png")
 child34.save
