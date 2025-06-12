@@ -1,30 +1,124 @@
-.request-show-profile {
-  background-color: #e1dbf3;
-}
+// .request-show-profile {
+//   background-color: rgb(177, 162, 224);
+// }
 
-.show-requests-box {
-  border: 3px solid #c1b5e6;
-  padding: 10px;
-  margin: 15px;
-  border-radius: 15px;
-}
+// .show-requests-box {
+//   border: 3px solid rgb(177, 162, 224);
+//   padding: 10px;
+//   margin: 15px;
+//   border-radius: 15px;
+// }
 
-.headers-show-request {
-  margin-left: 15px;
-}
+// .headers-show-request {
+//   margin-left: 15px;
+// }
 
 .request-accept-button {
   border: 3px solid #70c7a8;
   border-radius: 15px;
   background-color: #e2f4ee;
-  padding: 10px;
-  margin: 15px;
+  padding: 10px 20px;
+  margin: 10px;
+  text-align: center;
+  color: rgb(80, 83, 84);
+  font-family: "Comic Neue", cursive;
 }
 
 .request-reject-button {
   border: 3px solid #ee7e72;
   border-radius: 15px;
   background-color: #fce7e3;
+  padding: 10px 20px;
+  margin: 10px;
+  text-align: center;
+  color: rgb(80, 83, 84);
+  font-family: "Comic Neue", cursive;
+}
+
+.request_buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 10px;
+}
+
+.request_child_card {
+  background-color: rgba(177, 162, 224, 0.2);
+  margin: 10px;
   padding: 10px;
-  margin: 15px;
+  border-radius: 15px;
+}
+
+.request_foto_fit img {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 3px solid rgb(177, 162, 224);
+}
+
+.request_about_us {
+  border-radius: 15px;
+  border: 4px solid;
+  border-color: rgb(177, 162, 224);
+  background-color: white;
+  text-align: center;
+  display: flex;
+  margin: 0px 10px 0px 10px;
+  padding: 40px 20px;
+  font-family: "Comic Neue", cursive;
+}
+
+.request_child_show_name {
+  font-size: 60px;
+  font-weight: bold;
+  padding-top: 15px;
+  text-align: center;
+  color: white;
+    text-shadow:
+    -4px -4px 0 rgb(177, 162, 224),
+    4px -4px 0 rgb(177, 162, 224),
+    -4px  4px 0 rgb(177, 162, 224),
+    4px  4px 0 rgb(177, 162, 224);
+}
+
+.request_button1 {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(80, 83, 84);
+  border: 4px solid;
+  border-color: rgba(177, 162, 224, 0.6);
+  background-color: rgba(177, 162, 224, 0.2);
+  margin: 10px 20px;
+  border-radius: 15px;
+  padding: 5px 40px;
+}
+
+.request_overall_card {
+  background-color: rgba(177, 162, 224, 0.2);
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.request_child_card_boxes {
+  border-radius: 15px;
+  border: 3px solid rgb(177, 162, 224);
+  background-color: white;
+  padding: 5px;
+  text-align: center;
+  margin: 5px;
+}
+
+.request_child_card_boxes_full {
+  border-radius: 15px;
+  border: 4px solid;
+  border-color: rgb(177, 162, 224);
+  background-color: rgb(177, 162, 224);
+  padding: 5px;
+  text-align: center;
+  margin: 5px;
 }

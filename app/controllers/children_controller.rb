@@ -2,7 +2,7 @@ class ChildrenController < ApplicationController
   before_action :set_child, only: [ :create, :update ]
 
   def index
-    @children = Child.all
+    @children = Child.where.not(user: current_user)
     @notifications = current_user.requests_as_receiver.where(status: 0).count
     if params[:gender].present?
       # SELECT * WHERE gender = "boy"
