@@ -1,14 +1,17 @@
-<a href="/requests" class="button-back-navigation"><--</a>
-<div class="notification-box" id="notification-box2">
-  <img class="user-image" src="https://th.bing.com/th/id/OIP.jaCY5SwnrEfiIe5oy_B7HwHaE8?w=244&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Parent Profile Picture">
-  <%#h3> <%= chat.messages.first.content %> 
-  <div class="text-vertical-center">   
-    <div> 
-      <h1 class="luckiest-guy-regular"> <%= @chat.request.receiver == current_user ? @chat.request.requester.children.first.first_name : @chat.request.receiver.children.first.first_name%> </h1>
-    </div> 
-    <div> 
-      <h5 class="comic-neue-regular"> <%= @chat.request.receiver == current_user ? @chat.request.requester.first_name : @chat.request.receiver.first_name %> </h5>
-    </div> 
+<div>
+  <button class="chats_button1"><%= link_to "Back", requests_path %></button>
+</div>
+<div class="notification-box custom_shadow two_in_one_row">
+  <%= cl_image_tag @chat.request.receiver == current_user ? @chat.request.requester.children.first.photo.key : @chat.request.receiver.children.first.photo.key, class: "chats_foto_fit" %>
+  <%# <img class="chats_foto_fit" src="https://th.bing.com/th/id/OIP.jaCY5SwnrEfiIe5oy_B7HwHaE8?w=244&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Parent Profile Picture"> %>
+  <%#h3> <%= chat.messages.first.content %>
+  <div class="chats_title_text">
+    <div>
+      <h1 class="luckiest-guy-regular chats_child"> <%= @chat.request.receiver == current_user ? @chat.request.requester.children.first.first_name : @chat.request.receiver.children.first.first_name%> </h1>
+    </div>
+    <div>
+      <h5 class="comic-neue-regular chats_parent"> <%= @chat.request.receiver == current_user ? @chat.request.requester.first_name : @chat.request.receiver.first_name %> </h5>
+    </div>
   </div>
 </div>
 
