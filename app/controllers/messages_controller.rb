@@ -8,9 +8,16 @@ class MessagesController < ApplicationController
     @message = Message.create(message_params)
     @message.chat = @chat
     @message.user = current_user
-
     if @message.save
-      redirect_to chat_path(@chat)
+      respond_to do |format|
+        format.turbo_stream do
+          render turbo_stream: turbo_stream.append(:messages, partial: "messages/message",
+            locals: { message: @message, user: current_user })
+        end
+        format.html { redirect_to chat_path(@chat) }
+      end
+    else
+      render "chats/show", status: :unprocessable_entity
     end
   end
 

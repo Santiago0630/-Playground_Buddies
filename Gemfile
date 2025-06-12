@@ -76,3 +76,4 @@ group :test do
 end
 
 gem 'cloudinary'
+gem 'solid_cable'
