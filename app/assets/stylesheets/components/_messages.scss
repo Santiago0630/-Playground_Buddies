@@ -2,6 +2,11 @@
   flex: 0 0 auto;
 }
 
+#notification-box2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .chat-layout {
   flex: 1 1 auto;
   display: flex;
@@ -14,9 +19,10 @@
   flex: 1 1 auto;
   overflow-y: auto;
   padding: 1rem;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   background-color: #f8f6fb;
   border-radius: 15px;
+  height: 570px;
 }
 
 .message {
@@ -28,7 +34,10 @@
 
 .message-info {
   opacity: 0.5;
-  text-align: center;
+}
+
+.message-info-user {
+  align-self: flex-end;
 }
 
 .message-content {
@@ -42,13 +51,14 @@
 
 .message.sent .message-content {
   align-self: flex-end;
-  background: #B1A1E1;
-  color: #B1A1E1;
+  background: #5a439e;
+  color: white;
 }
 
 .message.received .message-content {
   align-self: flex-start;
   background: #D3CCEE;
+  color: #5a439e;
 }
 
 .message-input {
@@ -67,6 +77,13 @@
   }
 }
 
-.message-box {
-  max-width: 250px;
+
+.message-send {
+  background: #4e3598;
+  color: white;
+}
+
+.message-field {
+  background: #eeecf7;
+  color: #4e3598;
 }

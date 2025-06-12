@@ -1,5 +1,5 @@
 <a href="/requests" class="button-back-navigation"><--</a>
-<div class="notification-box">
+<div class="notification-box" id="notification-box2">
   <img class="user-image" src="https://th.bing.com/th/id/OIP.jaCY5SwnrEfiIe5oy_B7HwHaE8?w=244&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Parent Profile Picture">
   <%#h3> <%= chat.messages.first.content %> 
   <div class="text-vertical-center">   
@@ -28,9 +28,10 @@
       <%= f.input :content,
         label: false,
         placeholder: "Message",
-        wrapper_html: {class: "flex-grow-1"}
+        wrapper_html: {class: "flex-grow-1"},
+        input_html: {class: "message-field"}
       %>
-      <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+      <%= f.submit "Send", class: "btn message-send mb-3" %>
     <% end %>
   </div>
 </div>

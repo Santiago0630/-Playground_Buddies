@@ -20,13 +20,13 @@
     word-wrap: break-word;
   }
 
-  .message.sent .message-content {
-    align-self: flex-end;
-    background: $blue;
-    color: $light-gray;
-  }
+  // .message.sent .message-content {
+  //   align-self: flex-end;
+  //   background: $blue;
+  //   color: $light-gray;
+  // }
 
-  .message.received .message-content {
-    align-self: flex-start;
-    background: $gray-200;
-  }
+  // .message.received .message-content {
+  //   align-self: flex-start;
+  //   background: $gray-200;
+  // }
