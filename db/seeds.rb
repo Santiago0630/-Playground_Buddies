@@ -43,7 +43,7 @@ puts "Creating user"
 # user18 = User.create(first_name: "Andre", last_name: "Seidel", age: 37, gender: "male", email: "andre.seidel@gmail.com", password: "123456", about: "Full-time dad to Clara (5). We’re a creative duo and love artsy playdates. Let’s make some colorful memories!")
 # user19 = User.create(first_name: "Mira", last_name: "Lang", age: 29, gender: "female", email: "mira@gmail.com", password: "123456", about: "Hi, I'm Mira. My daughter Lilly just started walking and we’re eager to make new playground friends.")
 # user20 = User.create(first_name: "Kevin", last_name: "Schuster", age: 34, gender: "male", email: "kevin@gmail.com", password: "123456", about: "Hey! Stay-at-home dad here. I’ve got twins (age 3) and lots of time for playdates, especially in the mornings.")
-user21 = User.create(first_name: "Julia", last_name: "Bauer", age: 31, gender: 1, email: "julia@gmail.com", password: "123456", about: "Mama to Mia (2). We're always around the neighborhood park and would love to meet new play pals.")
+user21 = User.create(first_name: "Julia", last_name: "Bauer", age: 31, gender: 1, email: "julia@gmail.com", password: "123456", about: "Mama to Mia (6). We're always around the neighborhood park and would love to meet new play pals.")
 user22 = User.create(first_name: "Thomas", last_name: "Lorenz", age: 39, gender: 0, email: "thomas@gmail.com", password: "123456", about: "My son Nick is 5 and full of questions. We'd love to find a fellow curious buddy to play and learn with.")
 user23 = User.create(first_name: "Rama", last_name: "Bah", age: 33, gender: 1, email: "Rama@gmail.com", password: "123456", about: "Hi everyone! Rama here - mama of Emil. We love books, baking, and climbing frames.")
 user24 = User.create(first_name: "Hakim", last_name: "Scholz", age: 30, gender: 0, email: "hakim@gmail.com", password: "123456", about: "I’m Hakim, dad to Finn (3). We're looking for spontaneous meetups and lots of outdoor fun. Let's connect!")
@@ -91,27 +91,27 @@ puts "Creating Child"
 
 # child24 = Child.create(user_id: user18, first_name: "Clara", gender: "girl", age: 5, about: "Clara loves painting and creating little stories while she plays.")
 
-child25 = Child.create(user: user22, first_name: "Lily", gender: 1, age: 1, about: "Lilly is curious and loves crawling around on the grass.", image_url: "https://images.pexels.com/photos/8236378/pexels-photo-8236378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+child25 = Child.create(user: user24, first_name: "Lily", gender: 1, age: 3, about: "Lilly is curious and loves crawling around on the grass.", image_url: "https://images.pexels.com/photos/8236378/pexels-photo-8236378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
 child25_photo = URI.parse("https://images.pexels.com/photos/8236378/pexels-photo-8236378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1").open
 child25.photo.attach(io: child25_photo, filename: "child.png", content_type: "image/png")
 child25.save
 
-child26 = Child.create(user: user25, first_name: "Noah", gender: 0, age: 3, about: "Noah loves running in circles and laughing with other kids.", image_url: "https://media.istockphoto.com/id/497204343/photo/playful-family-in-the-playground.jpg?s=612x612&w=0&k=20&c=WVC_M75aD6Rez77VZ2r1ks103m4DrjGZNGXOmZQt6ow=")
+child26 = Child.create(user: user25, first_name: "Noah", gender: 0, age: 5, about: "Noah loves running in circles and laughing with other kids.", image_url: "https://media.istockphoto.com/id/497204343/photo/playful-family-in-the-playground.jpg?s=612x612&w=0&k=20&c=WVC_M75aD6Rez77VZ2r1ks103m4DrjGZNGXOmZQt6ow=")
 child26_photo = URI.parse("https://media.istockphoto.com/id/497204343/photo/playful-family-in-the-playground.jpg?s=612x612&w=0&k=20&c=WVC_M75aD6Rez77VZ2r1ks103m4DrjGZNGXOmZQt6ow=").open
 child26.photo.attach(io: child26_photo, filename: "child.png", content_type: "image/png")
 child26.save
 
-child27 = Child.create(user: user22, first_name: "Nina", gender: 1, age: 3, about: "Nina is a natural climber and always heads straight to the jungle gym.", image_url: "https://media.istockphoto.com/id/156019069/photo/mother-and-daughter-having-fun-together-on-playground.jpg?s=612x612&w=0&k=20&c=JFHU42XKQzyKRjGFZvIWAQ9BbRRQsgY9I_UGYR6Tnzw=")
+child27 = Child.create(user: user25, first_name: "Nina", gender: 1, age: 3, about: "Nina is a natural climber and always heads straight to the jungle gym.", image_url: "https://media.istockphoto.com/id/156019069/photo/mother-and-daughter-having-fun-together-on-playground.jpg?s=612x612&w=0&k=20&c=JFHU42XKQzyKRjGFZvIWAQ9BbRRQsgY9I_UGYR6Tnzw=")
 child27_photo = URI.parse("https://media.istockphoto.com/id/156019069/photo/mother-and-daughter-having-fun-together-on-playground.jpg?s=612x612&w=0&k=20&c=JFHU42XKQzyKRjGFZvIWAQ9BbRRQsgY9I_UGYR6Tnzw=").open
 child27.photo.attach(io: child27_photo, filename: "child.png", content_type: "image/png")
 child27.save
 
-child28 = Child.create(user: user21, first_name: "Mia", gender: 1, age: 2, about: "Mia is gentle and enjoys watching the other kids before joining in.", image_url: "https://media.istockphoto.com/id/1438462378/photo/close-up-portrait-of-mother-and-daughter.jpg?s=612x612&w=0&k=20&c=cYHY-5PMxY2Zkxcn7WT7-7R4RnwS_anrZXbFsCK-0Eg=")
+child28 = Child.create(user: user21, first_name: "Mia", gender: 1, age: 6, about: "Mia is gentle and enjoys watching the other kids before joining in.", image_url: "https://media.istockphoto.com/id/1438462378/photo/close-up-portrait-of-mother-and-daughter.jpg?s=612x612&w=0&k=20&c=cYHY-5PMxY2Zkxcn7WT7-7R4RnwS_anrZXbFsCK-0Eg=")
 child28_photo = URI.parse("https://media.istockphoto.com/id/1438462378/photo/close-up-portrait-of-mother-and-daughter.jpg?s=612x612&w=0&k=20&c=cYHY-5PMxY2Zkxcn7WT7-7R4RnwS_anrZXbFsCK-0Eg=").open
 child28.photo.attach(io: child28_photo, filename: "child.png", content_type: "image/png")
 child28.save
 
-child29 = Child.create(user: user21, first_name: "Anna", gender: 1, age: 4, about: "Anna is adventurous and loves sliding again and again.", image_url: "https://media.istockphoto.com/id/1399807026/photo/father-with-daughter-on-playground-swing.jpg?s=612x612&w=0&k=20&c=tYKR8uWnfK0SCSDd2_0WaWKkUxdAu4DSvyNW_WK2Zhs=")
+child29 = Child.create(user: user23, first_name: "Anna", gender: 1, age: 4, about: "Anna is adventurous and loves sliding again and again.", image_url: "https://media.istockphoto.com/id/1399807026/photo/father-with-daughter-on-playground-swing.jpg?s=612x612&w=0&k=20&c=tYKR8uWnfK0SCSDd2_0WaWKkUxdAu4DSvyNW_WK2Zhs=")
 child29_photo = URI.parse("https://media.istockphoto.com/id/1399807026/photo/father-with-daughter-on-playground-swing.jpg?s=612x612&w=0&k=20&c=tYKR8uWnfK0SCSDd2_0WaWKkUxdAu4DSvyNW_WK2Zhs=").open
 child29.photo.attach(io: child29_photo, filename: "child.png", content_type: "image/png")
 child29.save
