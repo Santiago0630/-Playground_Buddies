@@ -5,6 +5,10 @@
       "background-color: #efecf9;"
     elsif current_page?(playgrounds_path)
       "background-color: #e2f4ee;"
+    elsif controller_name == "children" && action_name == "show"
+      "background-color: #dff0fc;"
+    elsif controller_name == "chats" && action_name == "show"
+      "background-color: #efecf9;"
     else current_page?(profile_path)
       "background-color: #fef8dd;"
     end
